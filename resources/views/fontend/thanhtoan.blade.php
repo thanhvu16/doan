@@ -47,25 +47,25 @@
                         <div class="row field-row">
                             <div class="col-xs-12 col-sm-6">
                                 <label>Họ Tên*</label>
-                                <input class="le-input" name="ho_ten" placeholder="nhập họ tên.." >
+                                <input class="le-input" required name="ho_ten" placeholder="nhập họ tên1.." >
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <label>Số điện thoại*</label>
-                                <input class="le-input" name="phone" placeholder="nhập sdt.." >
+                                <input class="le-input" name="phone" required placeholder="nhập sdt.." >
                             </div>
                         </div><!-- /.field-row -->
 
                         <div class="row field-row">
                             <div class="col-xs-12">
                                 <label>Địa chỉ*</label>
-                                <input class="le-input" name="address" placeholder="nhập địa chỉ giao hàng...">
+                                <input class="le-input" name="address" required placeholder="nhập địa chỉ giao hàng...">
                             </div>
                         </div><!-- /.field-row -->
 
                         <div class="row field-row">
                             <div class="col-xs-12 col-sm-6">
                                 <label>Email*</label>
-                                <input class="le-input" name="email" data-placeholder="Email.." >
+                                <input class="le-input" name="email" required data-placeholder="Email.." >
                             </div>
                         </div><!-- /.field-row -->
                 </div><!-- /.billing-address -->

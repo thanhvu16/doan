@@ -169,7 +169,7 @@
                     <div class="top-cart-holder dropdown animate-dropdown">
                         <div class="basket">
 
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="{{route('showcart')}}">
+                            <a class="dropdown-toggle"  href="{{route('showcart')}}">
                                 <div class="basket-item-count">
                                     <span class="count">{{Cart::count()}}</span>
                                     <img src="assets/images/icon-cart.png" alt="" />
