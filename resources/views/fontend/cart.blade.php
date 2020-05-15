@@ -57,7 +57,7 @@
                     <div class="col-xs-12 col-sm-3 no-margin">
                         <div class="quantity">
                             <div class="le-quantity">
-                                <input class="form-control change-qty" value="{{$sanpham->qty}}"
+                                <input class="form-control change-qty" min="1" value="{{$sanpham->qty}}"
                                        data-row_id="{{ $sanpham->rowId }}" data-url="{{ route('updatecart') }}"
                                        type="number">
                             </div>
