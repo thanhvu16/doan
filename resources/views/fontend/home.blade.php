@@ -14,19 +14,19 @@
                             <div class="container-fluid">
                                 <div class="caption vertical-center text-left right" style="padding-right:0;">
                                     <div class="big-text fadeInDown-1">
-                                        Save up to a<span class="big"><span class="sign">$</span>400</span>
+                                        Giá Sốc<span class="big"><span class="sign">2tr</span>xx</span>
                                     </div>
 
                                     <div class="excerpt fadeInDown-2">
-                                        on selected laptops<br>
-                                        &amp; desktop pcs or<br>
-                                        smartphones
+                                        Tính Năng Vượt Trội<br>
+                                       Camera 16Mp<br>
+                                        màn hình 8inch
                                     </div>
                                     <div class="small fadeInDown-2">
-                                        terms and conditions apply
+                                        Sở hữu ngay nào!!!
                                     </div>
                                     <div class="button-holder fadeInDown-3">
-                                        <a href="single-product.html" class="big le-button ">shop now</a>
+                                        <a href="single-product.html" class="big le-button ">Mua Ngay</a>
                                     </div>
                                 </div><!-- /.caption -->
                             </div><!-- /.container-fluid -->
@@ -63,19 +63,19 @@
     <section id="banner-holder" class="wow fadeInUp">
         <div class="container">
             <div class="col-xs-12 col-lg-6 no-margin banner">
-                <a href="category-grid-2.html">
+                <a href="">
                     <div class="banner-text theblue">
-                        <h1>New Life</h1>
-                        <span class="tagline">Introducing New Category</span>
+                        <h1>Sở hữu</h1>
+                        <span class="tagline">Điện thoại mới</span>
                     </div>
                     <img class="banner-image" alt="" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-narrow-01.jpg" />
                 </a>
             </div>
             <div class="col-xs-12 col-lg-6 no-margin text-right banner">
-                <a href="category-grid-2.html">
+                <a href="">
                     <div class="banner-text right">
-                        <h1>Time &amp; Style</h1>
-                        <span class="tagline">Checkout new arrivals</span>
+                        <h1>Apple Watch</h1>
+                        <span class="tagline">Giá rẻ nhất</span>
                     </div>
                     <img class="banner-image" alt="" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-narrow-02.jpg" />
                 </a>

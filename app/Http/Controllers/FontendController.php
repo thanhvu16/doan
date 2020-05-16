@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\customer;
+use App\Models\order;
 use App\Models\products;
 use App\Models\category;
 use App\Models\comment;
@@ -50,6 +52,31 @@ class FontendController extends Controller
         return view('fontend.baohanh',compact('baohanh'));
     }
 
+    public function tracuudonhang(Request $request){
+        $phone = $request->get('phone');
+//        $donhang=customer::where('stt',2)
+//            ->where(function ($query) use ($phone) {
+//                if (!empty($phone)) {
+//                    return $query->where('phone', 'LIKE', "$phone");
+//                }
+//            })-
+        $donhang=customer::where('phone',$request['phone'])->count();
+
+        $donhang1=customer::where('phone',$request['phone'])->get();
+
+
+        return view('fontend.tracuudon',compact('donhang1','donhang'));
+    }
+
+    public function timkiemsanpham(Request $request)
+    {
+
+        $seachpro= $request->key;
+
+        $pro= products::where('pro_name','like','%'.$seachpro.'%')->paginate(2);
+
+        return view('fontend.timkiem',compact('pro'));
+    }
 
 
     public function comment(Request $request,$id){

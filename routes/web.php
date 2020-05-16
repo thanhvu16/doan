@@ -23,6 +23,22 @@ Route::get('lienhe', 'FontendController@lienhe')->name('lienhe');
 Route::get('tintuc', 'FontendController@tintuc')->name('tintuc');
 Route::get('trungtambaohanh', 'FontendController@baohanh')->name('baohanh');
 
+Route::match(['get', 'post'],
+    'tracuudonhang',
+    [
+        'as' =>'tracuudonhang',
+        'uses' => 'FontendController@tracuudonhang'
+    ]
+);
+
+Route::match(['get', 'post'],
+    'timkiemsanpham',
+    [
+        'as' =>'timkiemsanpham',
+        'uses' => 'FontendController@timkiemsanpham'
+    ]
+);
+
 route::group(['prefix'=>'cart'],function(){
     route::get('addcart/{id}','CartController@getaddcart')->name('addcart');
     route::get('show','CartController@showcart')->name('showcart');

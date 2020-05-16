@@ -138,9 +138,10 @@
                 </div><!-- /.contact-row -->
                 <!-- ============================================================= SEARCH AREA ============================================================= -->
                 <div class="search-area">
-                    <form>
+                    <form action="{{route('timkiemsanpham')}}" method="get">
+                        @csrf
                         <div class="control-group">
-                            <input class="search-field" placeholder="Nhập Tên Sản Phẩm..." />
+                            <input class="search-field" name="key" placeholder="Nhập Tên Sản Phẩm..." />
 
                             <ul class="categories-filter animate-dropdown">
                                 <li class="dropdown">
@@ -149,7 +150,8 @@
                                 </li>
                             </ul>
 
-                            <a class="search-button" href="#" ></a>
+
+                            <input type="submit" class="search-button" name="submit" style="color: white" value="tìm kiếm" >
 
                         </div>
                     </form>
@@ -233,6 +235,9 @@
                             </li><!-- /.yamm-fw -->
                             <li class="dropdown yamm-fw">
                                 <a href="{{route('baohanh')}}" class="dropdown-toggle" data-hover="dropdown" >Trung Tâm Bảo Hành</a>
+                            </li><!-- /.yamm-fw -->
+                            <li class="dropdown yamm-fw">
+                                <a href="{{route('tracuudonhang')}}" class="dropdown-toggle" data-hover="dropdown" >Tra Cứu Đơn Hàng</a>
                             </li><!-- /.yamm-fw -->
 
 
