@@ -20,4 +20,8 @@ class products extends Model
         'pro_status',
         'pro_featured'
     ];
+    public function procate()
+    {
+        return $this->belongsTo(products::class, 'loaiVanBan_id', 'id');
+    }
 }

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AddProducts;
+use App\Models\file_product;
 use App\Models\products;
 use App\Models\category;
-use DB;
+use DB,File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -44,6 +45,13 @@ class ProductController extends Controller
     {
         $data = $requesst->all();
 
+
+
+
+
+
+
+
         $fileName = '';
         if ($requesst->has('pro_img') && $requesst->pro_img != NULL) {
             $fileName = md5(time() . $requesst->pro_img->getClientOriginalName()) . '.' . $requesst->pro_img->getClientOriginalExtension();
@@ -51,8 +59,29 @@ class ProductController extends Controller
         }
         $data['pro_img'] = $fileName;
 
-        products::create($data);
+        $product= new products();
+        $product->fill($data);
+        $product->save();
 
+//        products::create($data);
+        $multiFiles = !empty($requesst['ten_file']) ? $requesst['ten_file'] : null;
+        $uploadPath = public_path('public/upload');
+
+        if ($multiFiles && count($multiFiles) > 0) {
+            foreach ($multiFiles as $file_phu) {
+                $file_anh= new file_product();
+                $fileName = date('Y_m_d') . '_' . Time() . '_' . $file_phu->getClientOriginalName();
+                $urlFile = 'public/upload' . '/' . $fileName;
+                if (!File::exists($uploadPath)) {
+                    File::makeDirectory($uploadPath, 0775, true, true);
+                }
+                $file_phu->move($uploadPath, $fileName);
+                $file_anh->id_products = $product->id;
+                $file_anh->url = $fileName;
+                $file_anh->save();
+            }
+        }
+        return redirect()->route('product');
     }
 
     public function editpro($id)

@@ -78,7 +78,7 @@
 									<div class="form-group" >
 										<label>Sản phẩm nổi bật</label><br>
 										Có: <input type="radio" checked name="pro_featured"{{$pro->pro_featured == 1 ?'checked':''}}  value="1">
-										Không: <input type="radio" {{$pro->pro_featured == 0 ?'checked':''}}  name="featured" value="0">
+										Không: <input type="radio" {{$pro->pro_featured == 0 ?'checked':''}}  name="pro_featured" value="0">
 									</div>
                                     <button type="submit" class="btn btn-primary">Sửa Sản Phẩm</button>
 									<a href="#" class="btn btn-danger">Hủy bỏ</a>

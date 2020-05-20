@@ -7,6 +7,7 @@ use App\Models\products;
 use App\Models\category;
 use App\Models\comment;
 use App\Models\address;
+use App\Models\file_product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,21 +19,30 @@ class FontendController extends Controller
         $future= products::where('pro_featured',1)->get()->take(8) ;
         $new= products::orderBy('id','desc')->get()->take(8) ;
 
-        return view('fontend.home',compact('future','new'));
+        $applewatch1= products::where('pro_cate',12)->orderBy('id','desc')->get()->take(3);
+        $applewatch2= products::where('pro_cate',12)->orderBy('id','asc')->get()->take(3);
+
+        $applewatch3= products::where('pro_cate',12)->orderBy('id','asc')->first();
+
+
+
+        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3'));
     }
 
     public function getDeltail($id){
         $comment = comment::where('cmt_product',$id)->get();
         $detaipro=products::find($id);
+        $anhsp =file_product::where('id_products',$id)->get();
 
 
-        return view('fontend.details',compact('detaipro','comment'));
+        return view('fontend.details',compact('detaipro','comment','anhsp'));
     }
 
     public function getDeltailcate($id){
         $catename=category::find($id);
 //        dd($id);
         $category3 = products::where('pro_cate',$id)->get();
+
 
 
         return view('fontend.category',compact('category3','catename'));

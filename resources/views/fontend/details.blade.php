@@ -17,58 +17,27 @@
                             </a>
                         </div><!-- /.single-product-gallery-item -->
 
-                        <div class="single-product-gallery-item" id="slide2">
-                            <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
-                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
-                            </a>
-                        </div><!-- /.single-product-gallery-item -->
 
-                        <div class="single-product-gallery-item" id="slide3">
-                            <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
-                                <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-gallery-01.jpg" />
-                            </a>
-                        </div><!-- /.single-product-gallery-item -->
+                        @foreach($anhsp as $sp)
+                            <div class="single-product-gallery-item" id="slide2">
+                                <a data-rel="prettyphoto" href="assets/images/products/product-gallery-01.jpg">
+                                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="{{asset('../public/public/upload/'.$sp->url)}}" />
+                                </a>
+                            </div><!-- /.single-product-gallery-item -->
+                        @endforeach
+
                     </div><!-- /.single-product-slider -->
 
 
                     <div class="single-product-gallery-thumbs gallery-thumbs">
 
                         <div id="owl-single-product-thumbnails" class="owl-carousel">
+                            @foreach($anhsp as $sp)
                             <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="0" href="#slide1">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
+                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="{{asset('../public/public/upload/'.$sp->url)}}" />
                             </a>
+                            @endforeach
 
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="1" href="#slide2">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="0" href="#slide1">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="1" href="#slide2">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="0" href="#slide1">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="1" href="#slide2">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
-
-                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide3">
-                                <img width="67" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/gallery-thumb-01.jpg" />
-                            </a>
                         </div><!-- /#owl-single-product-thumbnails -->
 
                         <div class="nav-holder left hidden-xs">
@@ -118,7 +87,7 @@
                         <div class="le-quantity">
                             <form>
                                 <a class="minus" href="#reduce"></a>
-                                <input name="quantity" readonly="readonly" type="text" value="1" />
+                                <input name="quantity" readonly="readonly" type="text" value="1" min="0"  max="1" />
                                 <a class="plus" href="#add"></a>
                             </form>
                         </div>
