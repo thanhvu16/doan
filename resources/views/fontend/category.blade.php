@@ -8,6 +8,8 @@
                 <!-- ========================================= PRODUCT FILTER ========================================= -->
                 <div class="widget">
                     <h1>Lọc Sản Phẩm</h1>
+                    <form action="" method="post">
+                        @csrf
                     <div class="body bordered">
 
                         <div class="category-filter">
@@ -15,7 +17,7 @@
                             <hr>
                             <ul>
                                 @foreach($category as $cate)
-                                <li><input checked="checked" class="le-checkbox" type="checkbox"  /> <label>{{$cate->cate_name}}</label> <span class="pull-right">(2)</span></li>
+                                <li><input  name="hang" class="le-checkbox" type="checkbox"  /> <label>{{$cate->cate_name}}</label> <span class="pull-right">(2)</span></li>
                                 @endforeach
                             </ul>
                         </div><!-- /.category-filter -->
@@ -25,18 +27,19 @@
                             <hr>
                             <div class="price-range-holder">
 
-                                <input type="text" class="price-slider" value="" >
+                                <input type="text" class="price-slider" name="price" value="" >
 
                                 <span class="min-max">
                                             Price: 0 - 10000000đ
                                         </span>
                                 <span class="filter-button">
-                                            <a href="#">Tìm kiếm</a>
+                                            <button type="submit" class="btn btn-danger">Tìm kiếm</button>
                                         </span>
                             </div>
                         </div><!-- /.price-filter -->
 
                     </div><!-- /.body -->
+                    </form>
                 </div><!-- /.widget -->
                 <!-- ========================================= PRODUCT FILTER : END ========================================= -->
 
@@ -110,12 +113,12 @@
                                             <div class="product-item">
                                                 <div class="ribbon red"><span>sale</span></div>
                                                 <div class="image">
-                                                    <img alt="" src="assets/images/blank.gif" class="img-responsive" data-echo="{{asset('../storage/app/public/upload/'.$catepro->pro_img)}}" />
+                                                    <img alt="" src="assets/images/blank.gif" class="img-responsive" style="height: 153px" data-echo="{{asset('../storage/app/public/upload/'.$catepro->pro_img)}}" />
                                                 </div>
                                                 <div class="body">
                                                     <div class="label-discount green">-50% sale</div>
                                                     <div class="title">
-                                                        <a href="single-product.html">{{$catepro->pro_name}}</a>
+                                                        <a href="{{ route('detaipro', $catepro->id) }}">{{$catepro->pro_name}}</a>
                                                     </div>
 
                                                 </div>
@@ -172,7 +175,7 @@
                                                 <div class="body">
                                                     <div class="label-discount green">-50% sale</div>
                                                     <div class="title">
-                                                        <a href="single-product.html">{{$catepro->pro_name}}</a>
+                                                        <a href="{{ route('detaipro', $catepro->id) }}">{{$catepro->pro_name}}</a>
                                                     </div>
                                                     <div class="brand">sony</div>
                                                     <div class="excerpt">

@@ -15,7 +15,7 @@
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
 
-    <title>MediaCenter - Responsive eCommerce Template</title>
+    <title>Hải Thanh-Mobile</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
     <!-- Demo Purpose Only. Should be removed in production : END -->
 
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+{{--    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>--}}
 
     <!-- Icons/Glyphs -->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -75,7 +75,7 @@
                         </ul>
                     </li>
                     <li><a href="{{route('gettintuc')}}">Tin Tức</a></li>
-                    <li><a href="faq.html">Giới thiệu</a></li>
+                    <li><a href="{{route('gioithieu')}}">Giới thiệu</a></li>
                     <li><a href="{{route('lienhe')}}">Liên Hệ</a></li>
 
                 </ul>
@@ -214,7 +214,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-hover="dropdown" >Giới Thiệu</a>
+                                <a href="{{route('gioithieu')}}" class="dropdown-toggle" data-hover="dropdown" >Giới Thiệu</a>
                             </li>
 
                             <li class="dropdown">
@@ -295,7 +295,7 @@
                             </svg>
                         </div><!-- /.footer-logo -->
 
-                        <p class="regular-bold"> Feel free to contact us via phone,email or just send us mail.</p>
+                        <p class="regular-bold">Hãy liên hệ với chúng tôi ngay nào</p>
 
                         <p>
                             Address: Lĩnh Nam,Hoàng Mai,Hà Nội
@@ -304,9 +304,9 @@
                         <p>Email: Vuhaithanhcx1@gmail.com</p>
 
                         <div class="social-icons">
-                            <h3>Get in touch</h3>
+                            <h3>Liên Hệ </h3>
                             <ul>
-                                <li><a href="http://facebook.com/transvelo" class="fa fa-facebook"></a></li>
+                                <li><a href="http://facebook.com/thietbikhongdaycamera/" class="fa fa-facebook"></a></li>
                                 <li><a href="#" class="fa fa-twitter"></a></li>
                                 <li><a href="#" class="fa fa-pinterest"></a></li>
                                 <li><a href="#" class="fa fa-linkedin"></a></li>
@@ -324,33 +324,25 @@
                     <!-- ============================================================= LINKS FOOTER ============================================================= -->
                     <div class="link-widget">
                         <div class="widget">
-                            <h3>Find it fast</h3>
+                            <h3>Truy Cập Nhanh</h3>
                             <ul>
-                                <li><a href="category-grid.html">laptops &amp; computers</a></li>
-                                <li><a href="category-grid.html">Cameras &amp; Photography</a></li>
-                                <li><a href="category-grid.html">Smart Phones &amp; Tablets</a></li>
-                                <li><a href="category-grid.html">Video Games &amp; Consoles</a></li>
-                                <li><a href="category-grid.html">TV &amp; Audio</a></li>
-                                <li><a href="category-grid.html">Gadgets</a></li>
-                                <li><a href="category-grid.html">Car Electronic &amp; GPS</a></li>
-                                <li><a href="category-grid.html">Accesories</a></li>
+                                <li><a href="{{route('indexhome')}}">Trang Chủ</a></li>
+                                <li><a href="{{route('gioithieu')}}">Giới thiệu</a></li>
+                                <li><a href="{{route('baohanh')}}">Trung Tâm Bảo Hành</a></li>
+                                <li><a href="{{route('lienhe')}}">Liên Hệ</a></li>
+                                <li><a href="{{route('gettintuc')}}">Tin Tức</a></li>
+
                             </ul>
                         </div><!-- /.widget -->
                     </div><!-- /.link-widget -->
 
                     <div class="link-widget">
                         <div class="widget">
-                            <h3>Information</h3>
+                            <h3>Hãng sản phẩm</h3>
                             <ul>
-                                <li><a href="category-grid.html">Find a Store</a></li>
-                                <li><a href="category-grid.html">About Us</a></li>
-                                <li><a href="category-grid.html">Contact Us</a></li>
-                                <li><a href="category-grid.html">Weekly Deals</a></li>
-                                <li><a href="category-grid.html">Gift Cards</a></li>
-                                <li><a href="category-grid.html">Recycling Program</a></li>
-                                <li><a href="category-grid.html">Community</a></li>
-                                <li><a href="category-grid.html">Careers</a></li>
-
+                                @foreach($category as $item1)
+                                <li><a href="{{route('detaicate',$item1->id)}}">{{$item1->cate_name}}</a></li>
+                                @endforeach
                             </ul>
                         </div><!-- /.widget -->
                     </div><!-- /.link-widget -->
@@ -359,10 +351,10 @@
                         <div class="widget">
                             <h3>HỆ THỐNG SHOWROOM</h3>
                             <ul>
-                                <li><a href="category-grid.html" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>413 Hoàng Văn Thụ, P.2, Q. Tân Bình</a></li>
-                                <li><a href="category-grid.html" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>413 Hoàng Văn Thụ, P.2, Q. Tân Bình</a></li>
-                                <li><a href="category-grid.html" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>413 Hoàng Văn Thụ, P.2, Q. Tân Bình</a></li>
-                                <li><a href="category-grid.html" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>413 Hoàng Văn Thụ, P.2, Q. Tân Bình</a></li>
+                                <li><a href="" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>413 Hoàng Văn Thụ, P.2, Q. Tân Bình</a></li>
+                                <li><a href="" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>118 Lê Thanh Nghị, hbt, Hà Nội</a></li>
+                                <li><a href="" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>34 Lĩnh Nam, H.Mai, Hà Nội</a></li>
+                                <li><a href="" style="color: black;font-size: 14px"><i class="fa fa-map-marker" style="color:Blue;"><span style="color:black;">&nbsp;</span></i>120 Nguyễn Lương Bằng, tp.Hải Dương</a></li>
 
                             </ul>
                         </div><!-- /.widget -->
@@ -376,7 +368,7 @@
             <div class="container">
                 <div class="col-xs-12 col-sm-6 no-margin">
                     <div class="copyright">
-                        &copy; <a href="index-2.html">Media Center</a> - all rights reserved
+                        &copy; <a href="index-2.html">haithanh</a> Mobile
                     </div><!-- /.copyright -->
                 </div>
                 <div class="col-xs-12 col-sm-6 no-margin">

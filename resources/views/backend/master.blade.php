@@ -43,12 +43,13 @@
     <ul class="nav menu">
         <li role="presentation" class="divider"></li>
         <li class="active"><a href="{{asset('admin/home')}}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Trang chủ</a></li>
-        <li><a href="{{asset('product')}}"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Sản phẩm</a></li>
-        <li><a href="{{asset('category')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Danh mục</a></li>
-        <li><a href="{{route('getorder')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Đơn Hàng</a></li>
-        <li><a href="{{route('Blog.index')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Tin tức</a></li>
+        <li><a href="{{asset('product')}}"><svg class="glyph stroked key "><use xlink:href="#stroked-key"/></svg>Sản phẩm</a></li>
+        <li><a href="{{asset('category')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Hãng sản phẩm</a></li>
+        <li><a href="{{route('getorder')}}"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg> Đơn Hàng</a></li>
+        <li><a href="{{route('Blog.index')}}"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg>Tin tức</a></li>
         <li role="presentation" class="divider"></li>
     </ul>
+
 
 </div><!--/.sidebar-->
 @yield('main')

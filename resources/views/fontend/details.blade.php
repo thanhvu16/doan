@@ -66,8 +66,7 @@
                     </div>
 
                     <div class="buttons-holder">
-                        <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                        <a class="btn-add-to-compare" href="#">add to compare list</a>
+
                     </div>
 
                     <div class="excerpt">
@@ -80,15 +79,15 @@
 
                     <div class="prices">
                         <div class="price-current">{{number_format($detaipro->pro_price,0,',','.')}}đ</div>
-                        <div class="price-prev">$1740.00</div>
+                        <div class="price-prev">3.250.000đ</div>
                     </div>
 
                     <div class="qnt-holder">
                         <div class="le-quantity">
                             <form>
-                                <a class="minus" href="#reduce"></a>
-                                <input name="quantity" readonly="readonly" type="text" value="1" min="0"  max="1" />
-                                <a class="plus" href="#add"></a>
+
+                                <input name="quantity" readonly="readonly" type="text" value="1" min="0"  max="2" />
+
                             </form>
                         </div>
                         <a id="addto-cart" href="{{route('addcart' , $detaipro->id) }}" class="le-button huge">add to cart</a>
@@ -116,27 +115,17 @@
 
 
                         <div class="meta-row">
+
+
+
+
                             <div class="inline">
-                                <label>SKU:</label>
-                                <span>54687621</span>
+
                             </div><!-- /.inline -->
 
-                            <span class="seperator">/</span>
 
                             <div class="inline">
-                                <label>categories:</label>
-                                <span><a href="#">-50% sale</a>,</span>
-                                <span><a href="#">gaming</a>,</span>
-                                <span><a href="#">desktop PC</a></span>
-                            </div><!-- /.inline -->
 
-                            <span class="seperator">/</span>
-
-                            <div class="inline">
-                                <label>tag:</label>
-                                <span><a href="#">fast</a>,</span>
-                                <span><a href="#">gaming</a>,</span>
-                                <span><a href="#">strong</a></span>
                             </div><!-- /.inline -->
                         </div><!-- /.meta-row -->
                     </div><!-- /.tab-pane #description -->
@@ -267,239 +256,7 @@
     </section><!-- /#single-product-tab -->
     <!-- ========================================= SINGLE PRODUCT TAB : END ========================================= -->
     <!-- ========================================= RECENTLY VIEWED ========================================= -->
-    <section id="recently-reviewd" class="wow fadeInUp">
-        <div class="container">
-            <div class="carousel-holder hover">
 
-                <div class="title-nav">
-                    <h2 class="h1">Recently Viewed</h2>
-                    <div class="nav-holder">
-                        <a href="#prev" data-target="#owl-recently-viewed" class="slider-prev btn-prev fa fa-angle-left"></a>
-                        <a href="#next" data-target="#owl-recently-viewed" class="slider-next btn-next fa fa-angle-right"></a>
-                    </div>
-                </div><!-- /.title-nav -->
-
-                <div id="owl-recently-viewed" class="owl-carousel product-grid-holder">
-                    <div class="no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-                            <div class="ribbon red"><span>sale</span></div>
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-11.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">LC-70UD1U 70" class aquos 4K ultra HD</a>
-                                </div>
-                                <div class="brand">Sharp</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to Cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class="no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-                            <div class="ribbon blue"><span>new!</span></div>
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-12.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">cinemizer OLED 3D virtual reality TV Video</a>
-                                </div>
-                                <div class="brand">zeiss</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class=" no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-13.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">s2340T23" full HD multi-Touch Monitor</a>
-                                </div>
-                                <div class="brand">dell</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class=" no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-                            <div class="ribbon blue"><span>new!</span></div>
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-14.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">kardon BDS 7772/120 integrated 3D</a>
-                                </div>
-                                <div class="brand">harman</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class=" no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-                            <div class="ribbon green"><span>bestseller</span></div>
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-15.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">netbook acer travel B113-E-10072</a>
-                                </div>
-                                <div class="brand">acer</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class=" no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-16.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">iPod touch 5th generation,64GB, blue</a>
-                                </div>
-                                <div class="brand">apple</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class=" no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-13.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">s2340T23" full HD multi-Touch Monitor</a>
-                                </div>
-                                <div class="brand">dell</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-
-                    <div class=" no-margin carousel-item product-item-holder size-small hover">
-                        <div class="product-item">
-                            <div class="ribbon blue"><span>new!</span></div>
-                            <div class="image">
-                                <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-14.jpg" />
-                            </div>
-                            <div class="body">
-                                <div class="title">
-                                    <a href="single-product.html">kardon BDS 7772/120 integrated 3D</a>
-                                </div>
-                                <div class="brand">harman</div>
-                            </div>
-                            <div class="prices">
-                                <div class="price-current text-right">$1199.00</div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="single-product.html" class="le-button">Add to cart</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">Compare</a>
-                                </div>
-                            </div>
-                        </div><!-- /.product-item -->
-                    </div><!-- /.product-item-holder -->
-                </div><!-- /#recently-carousel -->
-
-            </div><!-- /.carousel-holder -->
-        </div><!-- /.container -->
-    </section><!-- /#recently-reviewd -->
     <!-- ========================================= RECENTLY VIEWED : END ========================================= -->
     <!-- ============================================================= FOOTER ============================================================= -->
 

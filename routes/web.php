@@ -21,6 +21,7 @@ Route::post('categorypro/postcomment/{id}', 'FontendController@comment')->name('
 Route::get('seach', 'FontendController@seach')->name('seach');
 Route::get('lienhe', 'FontendController@lienhe')->name('lienhe');
 Route::get('tintuc', 'FontendController@tintuc')->name('tintuc');
+Route::get('gioithieu', 'FontendController@gioithieu')->name('gioithieu');
 Route::get('trungtambaohanh', 'FontendController@baohanh')->name('baohanh');
 
 Route::match(['get', 'post'],
@@ -114,6 +115,13 @@ route::group(['prefix' => 'Order'], function () {
         [
             'as' =>'Dondanggiao',
             'uses' => 'OrderadminController@Dondanggiao'
+        ]
+    );
+    Route::match(['get', 'post'],
+        'ls',
+        [
+            'as' =>'huydon',
+            'uses' => 'OrderadminController@orderhoanthanh'
         ]
     );
     Route::match(['get', 'post'],

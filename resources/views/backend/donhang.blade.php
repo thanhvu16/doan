@@ -15,6 +15,9 @@
             <li role="presentation" class="text-uppercase {{ route::is('Donhoanthanh') ? 'active' : '' }}">
                 <a href="{{ route('Donhoanthanh') }}" aria-expanded="true">Đã Giao</a>
             </li>
+            <li role="presentation" class="text-uppercase {{ route::is('huydon') ? 'active' : '' }}">
+                <a href="{{ route('huydon') }}" aria-expanded="true">Lịch sử đơn đã hoàn thành</a>
+            </li>
         </ul>
         <fieldset class="feildset-form">
             <legend>Đơn Hàng</legend>

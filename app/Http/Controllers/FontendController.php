@@ -21,12 +21,21 @@ class FontendController extends Controller
 
         $applewatch1= products::where('pro_cate',12)->orderBy('id','desc')->get()->take(3);
         $applewatch2= products::where('pro_cate',12)->orderBy('id','asc')->get()->take(3);
+        $phukien= products::where('pro_cate',13)->orderBy('id','asc')->get()->take(3);
+        $phukien2= products::where('pro_cate',13)->orderBy('id','desc')->get()->take(3);
 
         $applewatch3= products::where('pro_cate',12)->orderBy('id','asc')->first();
 
 
 
-        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3'));
+
+
+        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3','phukien','phukien2'));
+    }
+
+    public function gioithieu()
+    {
+        return view('fontend.gioithieu');
     }
 
     public function getDeltail($id){
@@ -72,7 +81,14 @@ class FontendController extends Controller
 //            })-
         $donhang=customer::where('phone',$request['phone'])->count();
 
-        $donhang1=customer::where('phone',$request['phone'])->get();
+//        $donhang1=customer::where('phone',$request['phone'])->get();
+
+        $donhang1=customer::whereIn('stt', [1,2,3])
+            ->where(function ($query) use ($phone) {
+                if (!empty($phone)) {
+                    return $query->where('phone', $phone);
+                }
+            })->get();
 
 
         return view('fontend.tracuudon',compact('donhang1','donhang'));

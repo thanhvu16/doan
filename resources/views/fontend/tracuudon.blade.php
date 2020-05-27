@@ -57,15 +57,6 @@
                                 Tên Khách Hàng
                             </th>
                             <th>
-                                Địa Chỉ
-                            </th>
-                            <th>
-                                Số điện thoại
-                            </th>
-                            <th>
-                                Email
-                            </th>
-                            <th>
                                 Trạng thái
                             </th>
 
@@ -80,15 +71,6 @@
                                 </td>
                                 <td>
                                     {{$data->ho_ten}}
-                                </td>
-                                <td>
-                                    {{$data->address}}
-                                </td>
-                                <td>
-                                    {{$data->phone}}
-                                </td>
-                                <td>
-                                    {{$data->email}}
                                 </td>
                                 <td>
                                     @if($data->stt =='1')

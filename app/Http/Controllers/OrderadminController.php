@@ -28,6 +28,10 @@ class OrderadminController extends Controller
 
         return view('backend.Sanphamoder',compact('donhang'));
     }
+    public function orderhoanthanh(){
+        $donhang= customer::where(['stt'=>4])->get();
+        return view('backend.donhang',compact('donhang'));
+    }
 
 
 
@@ -37,12 +41,20 @@ class OrderadminController extends Controller
         $sttdh = customer::find($id);    // active trạng thái
         if ($sttdh->stt == 1) {
             $sttdh->stt = 2;
+            customer::where('id', $id)->update(['stt' => $sttdh->stt]);
+            return redirect()->route('Dondanggiao')
+                ->with('success', 'Cập nhật trạng thái thành công !');
         } elseif($sttdh->stt == 2) {
         $sttdh->stt = 3;
+            customer::where('id', $id)->update(['stt' => $sttdh->stt]);
+            return redirect()->route('Donhoanthanh')
+                ->with('success', 'Cập nhật trạng thái thành công !');
+        }else{
+            $sttdh->stt = 4;
+            customer::where('id', $id)->update(['stt' => $sttdh->stt]);
+            return redirect()->route('huydon')
+                ->with('success', 'Cập nhật trạng thái thành công !');
         }
-        customer::where('id', $id)->update(['stt' => $sttdh->stt]);
-        return back()
-            ->with('success', 'Cập nhật trạng thái thành công !');
     }
 
     public function Donhoanthanh()

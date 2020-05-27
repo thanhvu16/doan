@@ -14,7 +14,7 @@
                             <div class="container-fluid">
                                 <div class="caption vertical-center text-left right" style="padding-right:0;">
                                     <div class="big-text fadeInDown-1">
-                                        Giá Sốc<span class="big"><span class="sign">2tr</span>xx</span>
+                                        Giá Sốc<span class="big"><span class="sign">2xtr</span>xx</span>
                                     </div>
 
                                     <div class="excerpt fadeInDown-2">
@@ -26,27 +26,27 @@
                                         Sở hữu ngay nào!!!
                                     </div>
                                     <div class="button-holder fadeInDown-3">
-                                        <a href="single-product.html" class="big le-button ">Mua Ngay</a>
+                                        <a href="{{route('detaipro',10)}}" class="big le-button ">Mua Ngay</a>
                                     </div>
                                 </div><!-- /.caption -->
                             </div><!-- /.container-fluid -->
                         </div><!-- /.item -->
 
-                        <div class="item" style="background-image: url(assets/images/sliders/slider04.jpg);">
+                        <div class="item"  style="background-image: url(assets/images/sliders/g2.jpg);">
                             <div class="container-fluid">
                                 <div class="caption vertical-center text-left left" style="padding-left:7%;">
                                     <div class="big-text fadeInDown-1">
-                                        Want a<span class="big"><span class="sign">$</span>200</span>Discount?
+                                        Apple Watch<span class="big"><span class="sign">1tr</span>xx</span>Chỉ từ?
                                     </div>
 
                                     <div class="excerpt fadeInDown-2">
-                                        on desktop pcs
+                                        Sở Hữu
                                     </div>
                                     <div class="small fadeInDown-2">
-                                        terms and conditions apply
+                                        Ngay đi nào!!!
                                     </div>
                                     <div class="button-holder fadeInDown-3">
-                                        <a href="single-product.html" class="big le-button ">shop now</a>
+                                        <a href="{{route('detaipro',25)}}" class="big le-button ">Mua Ngay</a>
                                     </div>
                                 </div><!-- /.caption -->
                             </div><!-- /.container-fluid -->
@@ -63,7 +63,7 @@
     <section id="banner-holder" class="wow fadeInUp">
         <div class="container">
             <div class="col-xs-12 col-lg-6 no-margin banner">
-                <a href="">
+                <a href="{{route('detaicate',2)}} ">
                     <div class="banner-text theblue">
                         <h1>Sở hữu</h1>
                         <span class="tagline">Điện thoại mới</span>
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <div class="col-xs-12 col-lg-6 no-margin text-right banner">
-                <a href="">
+                <a href="{{route('detaicate',12)}}">
                     <div class="banner-text right">
                         <h1>Apple Watch</h1>
                         <span class="tagline">Giá rẻ nhất</span>
@@ -91,7 +91,7 @@
                 <ul class="nav nav-tabs" >
                     <li class="active"><a href="#featured" data-toggle="tab">Sản Phẩm nổi bật</a></li>
                     <li><a href="#new-arrivals" data-toggle="tab">Sản phẩm mới</a></li>
-                    <li><a href="#top-sales" data-toggle="tab">top sales</a></li>
+
                 </ul>
 
                 <!-- Tab panes -->
@@ -172,136 +172,7 @@
 
                     </div>
 
-                    <div class="tab-pane" id="top-sales">
-                        <div class="product-grid-holder">
 
-                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
-                                <div class="product-item">
-                                    <div class="ribbon red"><span>sale</span></div>
-                                    <div class="ribbon green"><span>bestseller</span></div>
-                                    <div class="image">
-                                        <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-04.jpg" />
-                                    </div>
-                                    <div class="body">
-                                        <div class="label-discount clear"></div>
-                                        <div class="title">
-                                            <a href="single-product.html">Netbook Acer TravelMate
-                                                B113-E-10072</a>
-                                        </div>
-                                        <div class="brand">acer</div>
-                                    </div>
-                                    <div class="prices">
-                                        <div class="price-prev">$1399.00</div>
-                                        <div class="price-current pull-right">$1199.00</div>
-                                    </div>
-                                    <div class="hover-area">
-                                        <div class="add-cart-button">
-                                            <a href="single-product.html" class="le-button">add to cart</a>
-                                        </div>
-                                        <div class="wish-compare">
-                                            <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">compare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
-                                <div class="product-item">
-
-                                    <div class="image">
-                                        <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-03.jpg" />
-                                    </div>
-                                    <div class="body">
-                                        <div class="label-discount clear"></div>
-                                        <div class="title">
-                                            <a href="single-product.html">POV Action Cam</a>
-                                        </div>
-                                        <div class="brand">sony</div>
-                                    </div>
-                                    <div class="prices">
-                                        <div class="price-prev">$1399.00</div>
-                                        <div class="price-current pull-right">$1199.00</div>
-                                    </div>
-                                    <div class="hover-area">
-                                        <div class="add-cart-button">
-                                            <a href="single-product.html" class="le-button">add to cart</a>
-                                        </div>
-                                        <div class="wish-compare">
-                                            <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">compare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
-                                <div class="product-item">
-                                    <div class="ribbon blue"><span>new!</span></div>
-                                    <div class="image">
-                                        <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-02.jpg" />
-                                    </div>
-                                    <div class="body">
-                                        <div class="label-discount clear"></div>
-                                        <div class="title">
-                                            <a href="single-product.html">White lumia 9001</a>
-                                        </div>
-                                        <div class="brand">nokia</div>
-                                    </div>
-                                    <div class="prices">
-                                        <div class="price-prev">$1399.00</div>
-                                        <div class="price-current pull-right">$1199.00</div>
-                                    </div>
-                                    <div class="hover-area">
-                                        <div class="add-cart-button">
-                                            <a href="single-product.html" class="le-button">add to cart</a>
-                                        </div>
-                                        <div class="wish-compare">
-                                            <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">compare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">
-                                <div class="product-item">
-                                    <div class="ribbon red"><span>sale</span></div>
-                                    <div class="image">
-                                        <img alt="" src="assets/images/blank.gif" data-echo="assets/images/products/product-01.jpg" />
-                                    </div>
-                                    <div class="body">
-                                        <div class="label-discount green">-50% sale</div>
-                                        <div class="title">
-                                            <a href="single-product.html">VAIO Fit Laptop - Windows 8 SVF14322CXW</a>
-                                        </div>
-                                        <div class="brand">sony</div>
-                                    </div>
-                                    <div class="prices">
-                                        <div class="price-prev">$1399.00</div>
-                                        <div class="price-current pull-right">$1199.00</div>
-                                    </div>
-
-                                    <div class="hover-area">
-                                        <div class="add-cart-button">
-                                            <a href="single-product.html" class="le-button">add to cart</a>
-                                        </div>
-                                        <div class="wish-compare">
-                                            <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">compare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="loadmore-holder text-center">
-                            <a class="btn-loadmore" href="#">
-                                <i class="fa fa-plus"></i>
-                                load more products</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -416,6 +287,91 @@
                         </div>
                     </div><!-- /.product-item-holder -->
                 </div><!-- /.col -->
+
+            </div><!-- /.product-grid-holder -->
+        </div><!-- /.container -->
+    </section><!-- /#bestsellers -->
+
+    <section id="bestsellers" class="color-bg wow fadeInUp">
+        <div class="container">
+            <h1 class="section-title">Phụ Kiện</h1>
+
+            <div class="product-grid-holder medium">
+                <div class="col-xs-12 col-md-7 no-margin">
+
+                    <div class="row no-margin">
+                        @foreach($phukien as $data1)
+                            <div class="col-xs-12 col-sm-4 no-margin product-item-holder size-medium hover">
+
+                                <div class="product-item">
+                                    <div class="image">
+                                        <a href="{{ route('detaipro', $data1->id) }}">
+                                            <img alt="" src="assets/images/blank.gif" style="height: 153px" data-echo="{{asset('../storage/app/public/upload/'.$data1->pro_img)}}" />
+                                        </a>
+                                    </div>
+                                    <div class="body">
+                                        <div class="label-discount clear"></div>
+                                        <div class="title">
+                                            <a href="{{ route('detaipro', $data1->id) }}">{{$data1->pro_name}}</a>
+                                        </div>
+                                        <div class="brand">beats</div>
+                                    </div>
+                                    <div class="prices">
+
+                                        <div class="price-current text-right">{{number_format($data1->pro_price,0,',','.')}}đ</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="add-cart-button">
+                                            <a href="{{ route('detaipro', $data1->id) }}" class="le-button">Add to cart</a>
+                                        </div>
+                                        <div class="wish-compare">
+                                            <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
+                                            <a class="btn-add-to-compare" href="#">Compare</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!-- /.product-item-holder -->
+                        @endforeach
+
+                    </div><!-- /.row -->
+
+                    <div class="row no-margin">
+                        @foreach($phukien2 as $data)
+                            <div class="col-xs-12 col-sm-4 no-margin product-item-holder size-medium hover">
+                                <div class="product-item">
+                                    <div class="image">
+                                        <a href="{{ route('detaipro', $data->id) }}">
+                                            <img alt="" src="assets/images/blank.gif" style="height: 153px" data-echo="{{asset('../storage/app/public/upload/'.$data->pro_img)}}" />
+                                        </a>
+                                    </div>
+                                    <div class="body">
+                                        <div class="label-discount clear"></div>
+                                        <div class="title">
+                                            <a href="{{ route('detaipro', $data->id) }}">{{$data->pro_name}}</a>
+                                        </div>
+                                        <div class="brand">fitbit zip</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="price-current text-right">{{number_format($data->pro_price,0,',','.')}}đ</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="add-cart-button">
+                                            <a href="{{ route('detaipro', $data->id) }}" class="le-button">Add to cart</a>
+                                        </div>
+                                        <div class="wish-compare">
+                                            <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
+                                            <a class="btn-add-to-compare" href="#">Compare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.product-item-holder -->
+                        @endforeach
+
+
+                    </div><!-- /.row -->
+                </div><!-- /.col -->
+
 
             </div><!-- /.product-grid-holder -->
         </div><!-- /.container -->

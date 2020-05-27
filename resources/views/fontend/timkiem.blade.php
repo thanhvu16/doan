@@ -106,7 +106,7 @@
                                                 <div class="product-item">
                                                     <div class="ribbon red"><span>sale</span></div>
                                                     <div class="image">
-                                                        <img alt="" src="assets/images/blank.gif" class="img-responsive" data-echo="{{asset('../storage/app/public/upload/'.$catepro->pro_img)}}" />
+                                                        <img alt="" src="assets/images/blank.gif" style="height: 153px" class="img-responsive" data-echo="{{asset('../storage/app/public/upload/'.$catepro->pro_img)}}" />
                                                     </div>
                                                     <div class="body">
                                                         <div class="label-discount green">-50% sale</div>
