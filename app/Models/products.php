@@ -22,6 +22,6 @@ class products extends Model
     ];
     public function procate()
     {
-        return $this->belongsTo(products::class, 'loaiVanBan_id', 'id');
+        return $this->belongsTo(category::class, 'pro_cate', 'id');
     }
 }

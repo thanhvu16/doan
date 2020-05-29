@@ -79,7 +79,7 @@
 
                             <div class="col-xs-12 col-sm-9 ">
                                 <div class="title"><a href="#">{{$sanpham->name}}</a></div>
-                                <div class="brand">sony</div>
+                                <div class="brand"></div>
                             </div>
 
                             <div class="col-xs-12 col-sm-2 no-margin">

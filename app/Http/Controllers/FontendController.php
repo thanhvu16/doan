@@ -79,7 +79,8 @@ class FontendController extends Controller
 //                    return $query->where('phone', 'LIKE', "$phone");
 //                }
 //            })-
-        $donhang=customer::where('phone',$request['phone'])->count();
+//        $donhang=customer::where('phone',$request['phone'])->count();
+        $donhang=customer::where('phone', $request['phone'])->whereIn('stt', [1,2,3])->count();
 
 //        $donhang1=customer::where('phone',$request['phone'])->get();
 

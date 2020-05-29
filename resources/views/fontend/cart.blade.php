@@ -51,7 +51,7 @@
                         <div class="title">
                             <a href="#">{{$sanpham->name}}</a>
                         </div>
-                        <div class="brand">sony</div>
+                        <div class="brand">{{$sanpham->procate->cate_name ?? ''}}</div>
                     </div>
 
                     <div class="col-xs-12 col-sm-3 no-margin">

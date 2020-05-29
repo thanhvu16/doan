@@ -53,11 +53,11 @@
                 </div><!-- /.single-product-gallery -->
             </div><!-- /.gallery-holder -->
             <div class="no-margin col-xs-12 col-sm-7 body-holder">
-                <div class="body">
+                <div class="body" style="margin-top: 20px;">
 
 
-                    <div class="title"><a href="#">{{$detaipro->pro_name}}</a></div>
-                    <div class="brand">sony</div>
+                    <div class="title"><a href="">{{$detaipro->pro_name}}</a></div>
+                    <div class="brand">{{$detaipro->procate->cate_name}}</div>
 
                     <div class="social-row">
                         <span class="st_facebook_hcount"></span>

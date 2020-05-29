@@ -93,7 +93,7 @@
                 </div>
                 @else
                 <div class="col-md-12 text-center">
-                    <p style="color: red">Mời bạn nhập số điện thoại để tìm kiếm!!!</p>
+                    <p style="color: red">Hiện Tại không có đơn hàng nào!Mời bạn nhập số điện thoại để tìm kiếm!!!</p>
                 </div>
                 @endif
 

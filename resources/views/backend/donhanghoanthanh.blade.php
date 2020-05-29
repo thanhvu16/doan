@@ -77,9 +77,11 @@
                                     @if($data->stt =='1')
                                         <span class="label label-success">Nhận đơn</span>
                                     @elseif(($data->stt =='2'))
-                                        <span class="label label-warning">Xác nhận</span>
+                                        <span class="label label-primary">Xác nhận</span>
+                                    @elseif(($data->stt =='3'))
+                                        <span class="label label-warning">Đã Giao</span>
                                     @else
-                                        <span class="label label-warning">Đã giao</span>
+                                        <span class="label label-danger">Hoàn Thành</span>
                                     @endif
                                 </td>
                                 <td>
@@ -88,9 +90,11 @@
                                         @if($data->stt =='1')
                                             <span class="label label-success">Nhận đơn</span>
                                         @elseif(($data->stt =='2'))
-                                            <span class="label label-warning">Xác nhận</span>
+                                            <span class="label label-primary">Xác nhận</span>
+                                        @elseif(($data->stt =='3'))
+                                            <span class="label label-warning">Đã Giao</span>
                                         @else
-                                            <span class="label label-warning">Đã giao</span>
+                                            <span class="label label-danger">Hoàn Thành</span>
                                         @endif
 
 

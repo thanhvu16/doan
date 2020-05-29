@@ -74,20 +74,24 @@
                                     @if($data->stt =='1')
                                         <span class="label label-success">Nhận đơn</span>
                                     @elseif(($data->stt =='2'))
-                                        <span class="label label-warning">Xác nhận</span>
+                                        <span class="label label-primary">Xác nhận</span>
+                                    @elseif(($data->stt =='3'))
+                                        <span class="label label-warning">Đã Giao</span>
                                     @else
-                                        <span class="label label-warning">Đã giao</span>
+                                        <span class="label label-danger">Hoàn Thành</span>
                                     @endif
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary waves-effect btn-action"  href="{{ route('sttdonhang',$data->id) }}"  role="button" title="Trạng Thái">
+                                    <a class="btn btn-success waves-effect btn-action"  href="{{ route('sttdonhang',$data->id) }}"  role="button" title="Trạng Thái">
 
                                         @if($data->stt =='1')
                                             <span class="label label-success">Nhận đơn</span>
                                         @elseif(($data->stt =='2'))
-                                            <span class="label label-warning">Xác nhận</span>
+                                            <span class="label label-primary">Xác nhận</span>
+                                        @elseif(($data->stt =='3'))
+                                            <span class="label label-warning">Đã Giao</span>
                                         @else
-                                            <span class="label label-warning">Đã giao</span>
+                                            <span class="label label-danger">Hoàn Thành</span>
                                         @endif
 
 

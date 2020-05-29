@@ -110,7 +110,7 @@
                                         <div class="title">
                                             <a href="single-product.html">{{$data->pro_name}}</a>
                                         </div>
-                                        <div class="brand">sony</div>
+                                        <div class="brand">{{$data->procate->cate_name ?? ''}}</div>
                                     </div>
                                     <div class="prices">
                                         <div class="price-prev">$1399.00</div>
@@ -119,7 +119,7 @@
 
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{ route('detaipro', $data->id) }}" class="le-button">add to cart</a>
+                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">add to cart</a>
                                         </div>
                                         <div class="wish-compare">
                                             <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
@@ -147,7 +147,7 @@
                                         <div class="title">
                                             <a href="single-product.html">{{$newpro->pro_name}}</a>
                                         </div>
-                                        <div class="brand">nokia</div>
+                                        <div class="brand">{{$newpro->procate->cate_name ?? ''}}</div>
                                     </div>
                                     <div class="prices">
                                         <div class="price-prev">$1399.00</div>
@@ -155,7 +155,7 @@
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{ route('detaipro', $data->id) }}" class="le-button">add to cart</a>
+                                            <a href="{{route('addcart' , $newpro->id) }}" class="le-button">add to cart</a>
                                         </div>
                                         <div class="wish-compare">
                                             <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
@@ -201,7 +201,7 @@
                                     <div class="title">
                                         <a href="{{ route('detaipro', $data1->id) }}">{{$data1->pro_name}}</a>
                                     </div>
-                                    <div class="brand">beats</div>
+                                    <div class="brand">{{$data1->procate->cate_name ?? ''}}</div>
                                 </div>
                                 <div class="prices">
 
@@ -209,7 +209,7 @@
                                 </div>
                                 <div class="hover-area">
                                     <div class="add-cart-button">
-                                        <a href="{{ route('detaipro', $data1->id) }}" class="le-button">Add to cart</a>
+                                        <a href="{{route('addcart' , $data1->id) }}" class="le-button">Add to cart</a>
                                     </div>
                                     <div class="wish-compare">
                                         <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
@@ -237,14 +237,14 @@
                                     <div class="title">
                                         <a href="{{ route('detaipro', $data->id) }}">{{$data->pro_name}}</a>
                                     </div>
-                                    <div class="brand">fitbit zip</div>
+                                    <div class="brand">{{$data->procate->cate_name ?? ''}}</div>
                                 </div>
                                 <div class="prices">
                                     <div class="price-current text-right">{{number_format($data->pro_price,0,',','.')}}đ</div>
                                 </div>
                                 <div class="hover-area">
                                     <div class="add-cart-button">
-                                        <a href="{{ route('detaipro', $data->id) }}" class="le-button">Add to cart</a>
+                                        <a href="{{route('addcart' , $data->id) }}" class="le-button">Add to cart</a>
                                     </div>
                                     <div class="wish-compare">
                                         <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
@@ -279,11 +279,11 @@
                             <div class="title">
                                 <a href="{{ route('detaipro', $applewatch3->id) }}">{{$applewatch3->pro_name}}</a>
                             </div>
-                            <div class="brand">sony</div>
+                            <div class="brand">{{$applewatch3->procate->cate_name ?? ''}}</div>
                         </div>
                         <div class="prices text-right">
                             <div class="price-current inline">{{number_format($applewatch3->pro_price,0,',','.')}}đ</div>
-                            <a href="{{ route('detaipro', $applewatch3->id) }}" class="le-button big inline">add to cart</a>
+                            <a href="{{route('addcart' , $applewatch3->id) }}" class="le-button big inline">add to cart</a>
                         </div>
                     </div><!-- /.product-item-holder -->
                 </div><!-- /.col -->
@@ -314,7 +314,7 @@
                                         <div class="title">
                                             <a href="{{ route('detaipro', $data1->id) }}">{{$data1->pro_name}}</a>
                                         </div>
-                                        <div class="brand">beats</div>
+                                        <div class="brand">{{$data1->procate->cate_name ?? ''}}</div>
                                     </div>
                                     <div class="prices">
 
@@ -322,11 +322,11 @@
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{ route('detaipro', $data1->id) }}" class="le-button">Add to cart</a>
+                                            <a href="{{route('addcart' , $data1->id) }}" class="le-button">Add to cart</a>
                                         </div>
                                         <div class="wish-compare">
-                                            <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">Compare</a>
+                                            <a class="btn-add-to-wishlist" href="">Add to Wishlist</a>
+                                            <a class="btn-add-to-compare" href="">Compare</a>
                                         </div>
                                     </div>
                                 </div>
@@ -350,18 +350,18 @@
                                         <div class="title">
                                             <a href="{{ route('detaipro', $data->id) }}">{{$data->pro_name}}</a>
                                         </div>
-                                        <div class="brand">fitbit zip</div>
+                                        <div class="brand">{{$data->procate->cate_name ?? ''}}</div>
                                     </div>
                                     <div class="prices">
                                         <div class="price-current text-right">{{number_format($data->pro_price,0,',','.')}}đ</div>
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{ route('detaipro', $data->id) }}" class="le-button">Add to cart</a>
+                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">Add to cart</a>
                                         </div>
                                         <div class="wish-compare">
-                                            <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">Compare</a>
+                                            <a class="btn-add-to-wishlist" href="">Add to Wishlist</a>
+                                            <a class="btn-add-to-compare" href="">Compare</a>
                                         </div>
                                     </div>
                                 </div>
