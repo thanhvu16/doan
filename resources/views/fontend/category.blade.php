@@ -7,33 +7,32 @@
             <div class="col-xs-12 col-sm-3 no-margin sidebar narrow">
                 <!-- ========================================= PRODUCT FILTER ========================================= -->
                 <div class="widget">
-                    <h1>Lọc Sản Phẩm</h1>
+                    <h1>Hãng điện thoại</h1>
                     <form action="" method="post">
                         @csrf
                     <div class="body bordered">
 
                         <div class="category-filter">
-                            <h2>Tìm Theo Hãng</h2>
+                            <h2>Các Hãng</h2>
                             <hr>
                             <ul>
                                 @foreach($category as $cate)
-                                <li><input  name="hang" class="le-checkbox" type="checkbox"  /> <label>{{$cate->cate_name}}</label> <span class="pull-right">(2)</span></li>
+                                <li><label>{{$cate->cate_name}}</label> <span class="pull-right">(!)</span></li>
                                 @endforeach
                             </ul>
                         </div><!-- /.category-filter -->
 
                         <div class="price-filter">
-                            <h2>Tìm theo giá</h2>
                             <hr>
                             <div class="price-range-holder">
 
                                 <input type="text" class="price-slider" name="price" value="" >
 
-                                <span class="min-max">
-                                            Price: 0 - 10000000đ
-                                        </span>
+{{--                                <span class="min-max">--}}
+{{--                                            Price: 0 - 10000000đ--}}
+{{--                                        </span>--}}
                                 <span class="filter-button">
-                                            <button type="submit" class="btn btn-danger">Tìm kiếm</button>
+
                                         </span>
                             </div>
                         </div><!-- /.price-filter -->
