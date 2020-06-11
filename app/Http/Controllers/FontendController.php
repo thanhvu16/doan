@@ -16,8 +16,10 @@ class FontendController extends Controller
 {
 
     public function getindex(){
-        $future= products::where('pro_featured',1)->get()->take(8) ;
+        $future= products::where('pro_featured',1)->orderBy('id','desc')->get()->take(8) ;
         $new= products::orderBy('id','desc')->get()->take(8) ;
+        $apple= products::where('pro_cate',1)->orderBy('id','desc')->get()->take(4) ;
+        $samsung= products::where('pro_cate',2)->orderBy('id','desc')->get()->take(4) ;
 
         $applewatch1= products::where('pro_cate',12)->orderBy('id','desc')->get()->take(3);
         $applewatch2= products::where('pro_cate',12)->orderBy('id','asc')->get()->take(3);
@@ -30,7 +32,7 @@ class FontendController extends Controller
 
 
 
-        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3','phukien','phukien2'));
+        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3','phukien','phukien2','apple','samsung'));
     }
 
     public function gioithieu()

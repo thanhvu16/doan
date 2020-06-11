@@ -13,7 +13,7 @@ class ComposercategoryProvider extends ServiceProvider
      */
     public function register()
     {
-        \view()->composer(['fontend.master', 'fontend.baohanh', 'fontend.gioithieu', 'fontend.category', 'fontend.tracuudon'],
+        \view()->composer(['fontend.master', 'fontend.baohanh', 'fontend.gioithieu', 'fontend.category', 'fontend.tracuudon', 'fontend.tintuc', 'blog.detailblog', 'fontend.timkiem'],
             'App\Http\ViewComposers\CategoryComposer'
         );
     }

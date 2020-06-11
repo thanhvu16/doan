@@ -17,14 +17,22 @@
 					<div class="panel-body">
 						<form method="post" enctype="multipart/form-data">
 							<div class="row" style="margin-bottom:40px">
-								<div class="col-xs-8">
+								<div class="col-xs-8 giacusp">
 									<div class="form-group" >
 										<label>Tên sản phẩm</label>
 										<input required type="text" name="pro_name" value="{{$pro->pro_name}}" class="form-control">
 									</div>
+                                    <div class="form-group" >
+                                        <label>Giá cũ</label>
+                                        <input required type="number" value="{{$pro->gia_cu}}" name="gia_cu" id="gia_cu" class="form-control">
+                                    </div>
+                                    <div class="form-group" >
+                                        <label>sale</label>
+                                        <input required type="number" name="sale" value="{{$pro->sale}}" id="sale" class="form-control">
+                                    </div>
 									<div class="form-group" >
 										<label>Giá sản phẩm</label>
-										<input required type="number" value="{{$pro->pro_price}}" name="pro_price" class="form-control">
+										<input required type="number" readonly id="giasp" value="" name="pro_price" class="form-control">
 									</div>
 									<div class="form-group" >
 										<label>Ảnh sản phẩm</label>

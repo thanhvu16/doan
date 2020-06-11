@@ -83,7 +83,7 @@
         </div><!-- /.container -->
     </section><!-- /#banner-holder -->
     <!-- ========================================= HOME BANNERS : END ========================================= -->
-
+{{--//đây là tab 1--}}
     <div id="products-tab" class="wow fadeInUp">
         <div class="container">
             <div class="tab-holder">
@@ -101,29 +101,29 @@
                             @foreach($future as $data)
                             <div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
                                 <div class="product-item">
-                                    <div class="ribbon red"><span>sale</span></div>
+                                    <div class="ribbon red"><span>{{$data->sale}}% sale</span></div>
                                     <div class="image">
                                         <a href="{{ route('detaipro', $data->id) }}"><img alt="" style="height: 173px" src="assets/images/blank.gif" data-echo="{{asset('../storage/app/public/upload/'.$data->pro_img)}}" /></a>
                                     </div>
                                     <div class="body">
-                                        <div class="label-discount green">-50% sale</div>
+                                        <div class="label-discount green">{{$data->sale}}% sale</div>
                                         <div class="title">
                                             <a href="single-product.html">{{$data->pro_name}}</a>
                                         </div>
                                         <div class="brand">{{$data->procate->cate_name ?? ''}}</div>
                                     </div>
                                     <div class="prices">
-                                        <div class="price-prev">$1399.00</div>
+                                        <div class="price-prev">{{number_format($data->gia_cu,0,',','.')}}đ</div>
                                         <div class="price-current pull-right">{{number_format($data->pro_price,0,',','.')}}đ</div>
                                     </div>
 
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">add to cart</a>
+                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">Thêm vào giỏ</a>
                                         </div>
                                         <div class="wish-compare">
                                             <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">compare</a>
+                                            <a class="btn-add-to-compare" href="{{ route('detaipro', $data->id) }}">chi tiết</a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,16 +150,16 @@
                                         <div class="brand">{{$newpro->procate->cate_name ?? ''}}</div>
                                     </div>
                                     <div class="prices">
-                                        <div class="price-prev">$1399.00</div>
+                                        <div class="price-prev">{{number_format($data->gia_cu,0,',','.')}}đ</div>
                                         <div class="price-current pull-right">{{number_format($newpro->pro_price,0,',','.')}}đ</div>
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{route('addcart' , $newpro->id) }}" class="le-button">add to cart</a>
+                                            <a href="{{route('addcart' , $newpro->id) }}" class="le-button">Thêm vào giỏ</a>
                                         </div>
                                         <div class="wish-compare">
                                             <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                            <a class="btn-add-to-compare" href="#">compare</a>
+                                            <a class="btn-add-to-compare" href="{{route('addcart' , $newpro->id) }}">Chi tiết</a>
                                         </div>
                                     </div>
                                 </div>
@@ -171,6 +171,193 @@
 
 
                     </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{{--    //đay là tab 2--}}
+    <div id="products-tab" class="wow fadeInUp">
+        <div class="container">
+            <div class="tab-holder">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs"  >
+                    <li class="active"><a href="#featured" data-toggle="tab">Apple</a></li>
+{{--                    <li><a href="#new-arrivals" data-toggle="tab">Sản phẩm mới</a></li>--}}
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="featured">
+                        <div class="product-grid-holder">
+                            @foreach($apple as $data)
+                            <div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
+                                <div class="product-item">
+                                    <div class="ribbon red"><span>sale</span></div>
+                                    <div class="image">
+                                        <a href="{{ route('detaipro', $data->id) }}"><img alt="" style="height: 173px" src="assets/images/blank.gif" data-echo="{{asset('../storage/app/public/upload/'.$data->pro_img)}}" /></a>
+                                    </div>
+                                    <div class="body">
+                                        <div class="label-discount green">{{$data->sale}}% sale</div>
+                                        <div class="title">
+                                            <a href="single-product.html">{{$data->pro_name}}</a>
+                                        </div>
+                                        <div class="brand">{{$data->procate->cate_name ?? ''}}</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="price-prev">{{number_format($data->gia_cu,0,',','.')}}đ</div>
+                                        <div class="price-current pull-right">{{number_format($data->pro_price,0,',','.')}}đ</div>
+                                    </div>
+
+                                    <div class="hover-area">
+                                        <div class="add-cart-button">
+                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">Thêm vào giỏ</a>
+                                        </div>
+                                        <div class="wish-compare">
+                                            <a class="btn-add-to-wishlist" href="#">{{ route('detaipro', $data->id) }}</a>
+                                            <a class="btn-add-to-compare" href="#">compare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+
+
+                    </div>
+{{--                    <div class="tab-pane" id="new-arrivals">--}}
+{{--                        <div class="product-grid-holder">--}}
+{{--                            @foreach($new as $newpro)--}}
+{{--                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">--}}
+{{--                                <div class="product-item">--}}
+{{--                                    <div class="ribbon blue"><span>new!</span></div>--}}
+{{--                                    <div class="image">--}}
+{{--                                        <a href="{{ route('detaipro', $newpro->id) }}"><img alt="" src="assets/images/blank.gif" style="height: 173px" data-echo="{{asset('../storage/app/public/upload/'.$newpro->pro_img)}}" /></a>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="body">--}}
+{{--                                        <div class="label-discount clear"></div>--}}
+{{--                                        <div class="title">--}}
+{{--                                            <a href="single-product.html">{{$newpro->pro_name}}</a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="brand">{{$newpro->procate->cate_name ?? ''}}</div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="prices">--}}
+{{--                                        <div class="price-prev">$1399.00</div>--}}
+{{--                                        <div class="price-current pull-right">{{number_format($newpro->pro_price,0,',','.')}}đ</div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="hover-area">--}}
+{{--                                        <div class="add-cart-button">--}}
+{{--                                            <a href="{{route('addcart' , $newpro->id) }}" class="le-button">add to cart</a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="wish-compare">--}}
+{{--                                            <a class="btn-add-to-wishlist" href="#">add to wishlist</a>--}}
+{{--                                            <a class="btn-add-to-compare" href="#">compare</a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            @endforeach--}}
+
+
+{{--                        </div>--}}
+
+
+{{--                    </div>--}}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products-tab" class="wow fadeInUp">
+        <div class="container">
+            <div class="tab-holder">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs"  >
+                    <li class="active"><a href="#featured" data-toggle="tab">samsung</a></li>
+                    {{--                    <li><a href="#new-arrivals" data-toggle="tab">Sản phẩm mới</a></li>--}}
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="featured">
+                        <div class="product-grid-holder">
+                            @foreach($samsung as $data)
+                                <div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
+                                    <div class="product-item">
+                                        <div class="ribbon red"><span>sale</span></div>
+                                        <div class="image">
+                                            <a href="{{ route('detaipro', $data->id) }}"><img alt="" style="height: 173px" src="assets/images/blank.gif" data-echo="{{asset('../storage/app/public/upload/'.$data->pro_img)}}" /></a>
+                                        </div>
+                                        <div class="body">
+                                            <div class="label-discount green">{{$data->sale}}% sale</div>
+                                            <div class="title">
+                                                <a href="single-product.html">{{$data->pro_name}}</a>
+                                            </div>
+                                            <div class="brand">{{$data->procate->cate_name ?? ''}}</div>
+                                        </div>
+                                        <div class="prices">
+                                            <div class="price-prev">{{number_format($data->gia_cu,0,',','.')}}đ</div>
+                                            <div class="price-current pull-right">{{number_format($data->pro_price,0,',','.')}}đ</div>
+                                        </div>
+
+                                        <div class="hover-area">
+                                            <div class="add-cart-button">
+                                                <a href="{{route('addcart' , $data->id) }}" class="le-button">Thêm vào giỏ</a>
+                                            </div>
+                                            <div class="wish-compare">
+                                                <a class="btn-add-to-wishlist" href="#">{{ route('detaipro', $data->id) }}</a>
+                                                <a class="btn-add-to-compare" href="#">compare</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
+
+                    </div>
+                    {{--                    <div class="tab-pane" id="new-arrivals">--}}
+                    {{--                        <div class="product-grid-holder">--}}
+                    {{--                            @foreach($new as $newpro)--}}
+                    {{--                            <div class="col-sm-4 col-md-3 no-margin product-item-holder hover">--}}
+                    {{--                                <div class="product-item">--}}
+                    {{--                                    <div class="ribbon blue"><span>new!</span></div>--}}
+                    {{--                                    <div class="image">--}}
+                    {{--                                        <a href="{{ route('detaipro', $newpro->id) }}"><img alt="" src="assets/images/blank.gif" style="height: 173px" data-echo="{{asset('../storage/app/public/upload/'.$newpro->pro_img)}}" /></a>--}}
+                    {{--                                    </div>--}}
+                    {{--                                    <div class="body">--}}
+                    {{--                                        <div class="label-discount clear"></div>--}}
+                    {{--                                        <div class="title">--}}
+                    {{--                                            <a href="single-product.html">{{$newpro->pro_name}}</a>--}}
+                    {{--                                        </div>--}}
+                    {{--                                        <div class="brand">{{$newpro->procate->cate_name ?? ''}}</div>--}}
+                    {{--                                    </div>--}}
+                    {{--                                    <div class="prices">--}}
+                    {{--                                        <div class="price-prev">$1399.00</div>--}}
+                    {{--                                        <div class="price-current pull-right">{{number_format($newpro->pro_price,0,',','.')}}đ</div>--}}
+                    {{--                                    </div>--}}
+                    {{--                                    <div class="hover-area">--}}
+                    {{--                                        <div class="add-cart-button">--}}
+                    {{--                                            <a href="{{route('addcart' , $newpro->id) }}" class="le-button">add to cart</a>--}}
+                    {{--                                        </div>--}}
+                    {{--                                        <div class="wish-compare">--}}
+                    {{--                                            <a class="btn-add-to-wishlist" href="#">add to wishlist</a>--}}
+                    {{--                                            <a class="btn-add-to-compare" href="#">compare</a>--}}
+                    {{--                                        </div>--}}
+                    {{--                                    </div>--}}
+                    {{--                                </div>--}}
+                    {{--                            </div>--}}
+                    {{--                            @endforeach--}}
+
+
+                    {{--                        </div>--}}
+
+
+                    {{--                    </div>--}}
 
 
                 </div>
@@ -209,11 +396,11 @@
                                 </div>
                                 <div class="hover-area">
                                     <div class="add-cart-button">
-                                        <a href="{{route('addcart' , $data1->id) }}" class="le-button">Add to cart</a>
+                                        <a href="{{route('addcart' , $data1->id) }}" class="le-button">Thêm vào giỏ</a>
                                     </div>
                                     <div class="wish-compare">
                                         <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                        <a class="btn-add-to-compare" href="#">Compare</a>
+                                        <a class="btn-add-to-compare" href="{{ route('detaipro', $data1->id) }}">chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -244,11 +431,11 @@
                                 </div>
                                 <div class="hover-area">
                                     <div class="add-cart-button">
-                                        <a href="{{route('addcart' , $data->id) }}" class="le-button">Add to cart</a>
+                                        <a href="{{route('addcart' , $data->id) }}" class="le-button">Thêm vào giỏ</a>
                                     </div>
                                     <div class="wish-compare">
                                         <a class="btn-add-to-wishlist" href="#">Add to Wishlist</a>
-                                        <a class="btn-add-to-compare" href="#">Compare</a>
+                                        <a class="btn-add-to-compare" href="#">chi tiết</a>
                                     </div>
                                 </div>
                             </div>
@@ -283,7 +470,7 @@
                         </div>
                         <div class="prices text-right">
                             <div class="price-current inline">{{number_format($applewatch3->pro_price,0,',','.')}}đ</div>
-                            <a href="{{route('addcart' , $applewatch3->id) }}" class="le-button big inline">add to cart</a>
+                            <a href="{{route('addcart' , $applewatch3->id) }}" class="le-button big inline">Thêm vào giỏ</a>
                         </div>
                     </div><!-- /.product-item-holder -->
                 </div><!-- /.col -->
@@ -322,11 +509,11 @@
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{route('addcart' , $data1->id) }}" class="le-button">Add to cart</a>
+                                            <a href="{{route('addcart' , $data1->id) }}" class="le-button">Thêm vào giỏ</a>
                                         </div>
                                         <div class="wish-compare">
                                             <a class="btn-add-to-wishlist" href="">Add to Wishlist</a>
-                                            <a class="btn-add-to-compare" href="">Compare</a>
+                                            <a class="btn-add-to-compare" href="">Chi tiết</a>
                                         </div>
                                     </div>
                                 </div>
@@ -357,11 +544,11 @@
                                     </div>
                                     <div class="hover-area">
                                         <div class="add-cart-button">
-                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">Add to cart</a>
+                                            <a href="{{route('addcart' , $data->id) }}" class="le-button">Thêm vào giỏ</a>
                                         </div>
                                         <div class="wish-compare">
                                             <a class="btn-add-to-wishlist" href="">Add to Wishlist</a>
-                                            <a class="btn-add-to-compare" href="">Compare</a>
+                                            <a class="btn-add-to-compare" href="{{ route('detaipro', $data->id) }}">chi tiết</a>
                                         </div>
                                     </div>
                                 </div>

@@ -90,7 +90,21 @@
         $('#avatar').click(function(){
             $('#img').click();
         });
+
     });
+    $(document).ready(function () {
+        $('.giacusp').change(function () {
+            var gia = $('#gia_cu').val();
+            var sale = $('#sale').val();
+
+            gia_chot=gia-((gia*sale)/100);
+            console.log(gia_chot)
+            $('#giasp').val(gia_chot);
+        });
+    })
+
+
+
 </script>
 </body>
 

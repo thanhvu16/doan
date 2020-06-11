@@ -18,7 +18,7 @@
 					<div class="panel-body">
 						<form method="post" enctype="multipart/form-data">
 							<div class="row" style="margin-bottom:40px">
-								<div class="col-xs-12">
+								<div class="col-xs-12 giacusp">
 
                                     <div class="col-md-4">
                                         <div class="form-group" >
@@ -28,8 +28,20 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group" >
-                                            <label>Giá sản phẩm</label>
-                                            <input required type="number" name="pro_price" class="form-control">
+                                            <label>Giá cũ</label>
+                                            <input required type="number" name="gia_cu" id="gia_cu" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group" >
+                                            <label>sale</label>
+                                            <input required type="number" name="sale" id="sale" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group" >
+                                            <label>Giá Bán</label>
+                                            <input required type="number" name="pro_price" id="giasp" readonly class="form-control">
                                         </div>
                                     </div>
 
@@ -140,3 +152,7 @@
 		</div><!--/.row-->
 	</div>	<!--/.main-->
 @stop
+<script type="text/javascript">
+
+
+</script>

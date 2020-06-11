@@ -17,6 +17,8 @@ class products extends Model
         'pro_condition',
         'pro_promotion',
         'pro_decription',
+        'gia_cu',
+        'sale',
         'pro_status',
         'pro_featured'
     ];
