@@ -18,8 +18,9 @@
                         <colgroup width="100%">
                             <col style="width: 5%;">
                             <col style="width: 40%;">
+                            <col style="width: 10%;">
                             <col style="width: 25%;">
-                            <col style="width: 30%;">
+                            <col style="width: 15%;">
 
                         </colgroup>
                         <thead>
@@ -34,25 +35,32 @@
                                 Số Lượng
                             </th>
                             <th>
+                                Hình ảnh sản phẩm
+                            </th>
+                            <th>
                                 Giá Tiền
                             </th>
 
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($donhang as $key=>$data)
+                        @forelse($sanpham as $key=>$data)
                             <tr class="odd">
                                 <td class="text-center">
                                     {{$key+1}}
                                 </td>
-                                <td>
-                                    {{$data->name_sp}}
+                                <td style="font-weight: bold">
+                                    {{$data->product->pro_name}}
                                 </td>
+
                                 <td>
                                     {{$data->sl}}
                                 </td>
                                 <td>
-                                    {{number_format($data->total,0,',','.')}}đ
+                                    <img src="{{asset('../storage/app/public/upload/'.$data->product->pro_img)}}" height="200px" alt="">
+                                </td>
+                                <td style="color: red">
+                                    {{number_format($data->gia,0,',','.')}}đ
                                 </td>
 
                                 @empty

@@ -83,13 +83,6 @@
                     </div>
 
                     <div class="qnt-holder">
-                        <div class="le-quantity">
-                            <form>
-
-                                <input name="quantity" readonly="readonly" type="text" value="1" min="0"  max="2" />
-
-                            </form>
-                        </div>
                         <a id="addto-cart" href="{{route('addcart' , $detaipro->id) }}" class="le-button huge">add to cart</a>
                     </div><!-- /.qnt-holder -->
                 </div><!-- /.body -->

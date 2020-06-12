@@ -38,7 +38,7 @@
 											<td>
 												<img width="200px" src="{{asset('../storage/app/public/upload/'.$pro->pro_img)}}" class="thumbnail img-responsive">
 											</td>
-											<td>iPhone</td>
+											<td>{{$pro->procate->cate_name ?? ''}}</td>
 											<td>
 												<a href="{{route('editpro',$pro->id)}}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
 												<a href="{{route('deletepro',$pro->id)}}" onclick="return confirm('Bạn có chắc chắn muốn xóa?')" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>

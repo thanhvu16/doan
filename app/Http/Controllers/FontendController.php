@@ -75,23 +75,14 @@ class FontendController extends Controller
 
     public function tracuudonhang(Request $request){
         $phone = $request->get('phone');
-//        $donhang=customer::where('stt',2)
-//            ->where(function ($query) use ($phone) {
-//                if (!empty($phone)) {
-//                    return $query->where('phone', 'LIKE', "$phone");
-//                }
-//            })-
-//        $donhang=customer::where('phone',$request['phone'])->count();
-        $donhang=customer::where('phone', $request['phone'])->whereIn('stt', [1,2,3])->count();
-
-//        $donhang1=customer::where('phone',$request['phone'])->get();
-
+        $donhang=customer::where('phone', $request['phone'])->whereIn('stt', [1,2,3])->where('xoa_order',0)->count();
         $donhang1=customer::whereIn('stt', [1,2,3])
             ->where(function ($query) use ($phone) {
                 if (!empty($phone)) {
                     return $query->where('phone', $phone);
                 }
             })->get();
+
 
 
         return view('fontend.tracuudon',compact('donhang1','donhang'));

@@ -88,17 +88,21 @@
                                     <a class="btn btn-success waves-effect btn-action"  href="{{ route('sttdonhang',$data->id) }}"  role="button" title="Trạng Thái">
 
                                         @if($data->stt =='1')
-                                            <span class="label label-success">Nhận đơn</span>
+                                            <span class="">Nhận đơn</span>
                                         @elseif(($data->stt =='2'))
-                                            <span class="label label-primary">Xác nhận</span>
+                                            <span class="">Xác nhận</span>
                                         @elseif(($data->stt =='3'))
-                                            <span class="label label-warning">Đã Giao</span>
+                                            <span class="">Đã Giao</span>
                                         @else
-                                            <span class="label label-danger">Hoàn Thành</span>
+                                            <span class="">Hoàn Thành</span>
                                         @endif
 
 
                                     </a>
+                                    @if($data->stt =='1')
+                                    <a href="{{route('xoadon',$data->id)}}" class="btn btn-warning  waves-effect btn-action"  role="button"><span class="">Xóa đơn</span></a>
+                                    @else
+                                    @endif
                                 </td>
                                 <td class="text-center">
                                     <a href="{{route('getsporder',$data->id)}}">Xem Chi tiết</a>

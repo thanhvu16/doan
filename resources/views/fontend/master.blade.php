@@ -100,7 +100,7 @@
             <div class="col-xs-12 col-md-3 logo-holder">
                 <!-- ============================================================= LOGO ============================================================= -->
                 <div class="logo">
-                    <a href="index-2.html">
+                    <a href="{{route('indexhome')}}">
                         <!--<img alt="logo" src="assets/images/logo.svg" width="233" height="54"/>-->
                         <!--<object id="sp" type="image/svg+xml" data="assets/images/logo.svg" width="233" height="54"></object>-->
                         <img width="233px" height="54px" src="assets/images/brands/logo.png" alt="">
@@ -148,7 +148,7 @@
                             <ul class="categories-filter animate-dropdown">
                                 <li class="dropdown">
 
-                                    <a class="dropdown-toggle"  data-toggle="dropdown" href="category-grid.html">Tất Cả Sp</a>
+
                                 </li>
                             </ul>
 
@@ -165,7 +165,7 @@
                 <div class="top-cart-row-container">
                     <div class="wishlist-compare-holder">
                         <div class="wishlist ">
-                            <i class="fa fa-heart"></i> Yêu Thích
+{{--                            <i class="fa fa-heart"></i> Yêu Thích--}}
                         </div>
 
                     </div>
@@ -390,53 +390,53 @@
 
 
 <!-- For demo purposes – can be removed on production -->
-<div class="config open">
-    <div class="config-options">
-        <h4>Pages</h4>
-        <ul class="list-unstyled animate-dropdown">
-            <li class="dropdown">
-                <button class="dropdown-toggle btn le-button btn-block" data-toggle="dropdown">View Pages</button>
-                <ul class="dropdown-menu">
-                    <li><a href="index-2.html">Home-v1</a></li>
-                    <li><a href="index-3.html">Home-v2</a></li>
-                    <li><a href="category-grid.html">Category - Grid/List</a></li>
-                    <li><a href="category-grid-2.html">Category 2 - Grid/List</a></li>
-                    <li><a href="single-product.html">Single Product</a></li>
-                    <li><a href="single-product-sidebar.html">Single Product with Sidebar</a></li>
-                    <li><a href="cart.html">Shopping Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="blog-fullwidth.html">Blog Full Width</a></li>
-                    <li><a href="blog-post.html">Blog Post</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="terms.html">Terms &amp; Conditions</a></li>
-                    <li><a href="authentication.html">Login/Register</a></li>
-                    <li><a href="404.html">404</a></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="compare.html">Product Comparison</a></li>
-                    <li><a href="track-your-order.html">Track your Order</a></li>
-                </ul>
-            </li>
-        </ul>
-        <h4>Header Styles</h4>
-        <ul class="list-unstyled">
-            <li><a href="index-2.html">Header 1</a></li>
-            <li><a href="index-3.html">Header 2</a></li>
-        </ul>
-        <h4>Colors</h4>
-        <ul class="list-unstyled">
-            <li><a class="changecolor green-text" href="#" title="Green color">Green</a></li>
-            <li><a class="changecolor blue-text" href="#" title="Blue color">Blue</a></li>
-            <li><a class="changecolor red-text" href="#" title="Red color">Red</a></li>
-            <li><a class="changecolor orange-text" href="#" title="Orange color">Orange</a></li>
-            <li><a class="changecolor navy-text" href="#" title="Navy color">Navy</a></li>
-            <li><a class="changecolor dark-green-text" href="#" title="Darkgreen color">Dark Green</a></li>
-        </ul>
-    </div>
-    <a class="show-theme-options" href="#"><i class="fa fa-wrench"></i></a>
-</div>
+{{--<div class="config open">--}}
+{{--    <div class="config-options">--}}
+{{--        <h4>Pages</h4>--}}
+{{--        <ul class="list-unstyled animate-dropdown">--}}
+{{--            <li class="dropdown">--}}
+{{--                <button class="dropdown-toggle btn le-button btn-block" data-toggle="dropdown">View Pages</button>--}}
+{{--                <ul class="dropdown-menu">--}}
+{{--                    <li><a href="index-2.html">Home-v1</a></li>--}}
+{{--                    <li><a href="index-3.html">Home-v2</a></li>--}}
+{{--                    <li><a href="category-grid.html">Category - Grid/List</a></li>--}}
+{{--                    <li><a href="category-grid-2.html">Category 2 - Grid/List</a></li>--}}
+{{--                    <li><a href="single-product.html">Single Product</a></li>--}}
+{{--                    <li><a href="single-product-sidebar.html">Single Product with Sidebar</a></li>--}}
+{{--                    <li><a href="cart.html">Shopping Cart</a></li>--}}
+{{--                    <li><a href="checkout.html">Checkout</a></li>--}}
+{{--                    <li><a href="about.html">About Us</a></li>--}}
+{{--                    <li><a href="contact.html">Contact Us</a></li>--}}
+{{--                    <li><a href="blog.html">Blog</a></li>--}}
+{{--                    <li><a href="blog-fullwidth.html">Blog Full Width</a></li>--}}
+{{--                    <li><a href="blog-post.html">Blog Post</a></li>--}}
+{{--                    <li><a href="faq.html">FAQ</a></li>--}}
+{{--                    <li><a href="terms.html">Terms &amp; Conditions</a></li>--}}
+{{--                    <li><a href="authentication.html">Login/Register</a></li>--}}
+{{--                    <li><a href="404.html">404</a></li>--}}
+{{--                    <li><a href="wishlist.html">Wishlist</a></li>--}}
+{{--                    <li><a href="compare.html">Product Comparison</a></li>--}}
+{{--                    <li><a href="track-your-order.html">Track your Order</a></li>--}}
+{{--                </ul>--}}
+{{--            </li>--}}
+{{--        </ul>--}}
+{{--        <h4>Header Styles</h4>--}}
+{{--        <ul class="list-unstyled">--}}
+{{--            <li><a href="index-2.html">Header 1</a></li>--}}
+{{--            <li><a href="index-3.html">Header 2</a></li>--}}
+{{--        </ul>--}}
+{{--        <h4>Colors</h4>--}}
+{{--        <ul class="list-unstyled">--}}
+{{--            <li><a class="changecolor green-text" href="#" title="Green color">Green</a></li>--}}
+{{--            <li><a class="changecolor blue-text" href="#" title="Blue color">Blue</a></li>--}}
+{{--            <li><a class="changecolor red-text" href="#" title="Red color">Red</a></li>--}}
+{{--            <li><a class="changecolor orange-text" href="#" title="Orange color">Orange</a></li>--}}
+{{--            <li><a class="changecolor navy-text" href="#" title="Navy color">Navy</a></li>--}}
+{{--            <li><a class="changecolor dark-green-text" href="#" title="Darkgreen color">Dark Green</a></li>--}}
+{{--        </ul>--}}
+{{--    </div>--}}
+{{--    <a class="show-theme-options" href="#"><i class="fa fa-wrench"></i></a>--}}
+{{--</div>--}}
 <!-- For demo purposes – can be removed on production : End -->
 
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
@@ -474,6 +474,19 @@
     });
 </script>
 <!-- For demo purposes – can be removed on production : End -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5ee251884a7c6258179a6824/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 
 <!-- Mirrored from transvelo.github.io/mediacenter-html/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Sep 2018 08:27:04 GMT -->

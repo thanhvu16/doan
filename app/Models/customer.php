@@ -12,6 +12,7 @@ class customer extends Model
         'address',
         'phone',
         'email',
+        'xoa_order',
         'stt'
 ];
 }

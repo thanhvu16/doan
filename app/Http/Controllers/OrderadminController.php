@@ -1,35 +1,40 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\category;
 use App\Models\customer;
 use App\Models\order;
 
 
-
+use App\Models\order_detail;
 use Illuminate\Http\Request;
 
 class OrderadminController extends Controller
 {
     public function getorder()
     {
-        $donhang= customer::where(['stt'=>1])->get();
+        $donhang= customer::where(['stt'=>1,'xoa_order' => 0])->get();
         return view('backend.donhang',compact('donhang'));
     }
 
     public function Dondanggiao()
     {
-        $donhang= customer::where(['stt'=>2])->get();
+        $donhang= customer::where(['stt'=>2,'xoa_order' => 0])->get();
+//        $donhang= customer::where(['stt'=>2])->get();
         return view('backend.donhang',compact('donhang'));
     }
 
     public function getsporder($id)
     {
-        $donhang= order::where('id_customer',$id)->orderBy('id', 'desc')->get();
+        $order_id= order::where('id_customer',$id)->first();
+        $sanpham=order_detail::where('id_order',$order_id->id)->get();
+//        dd($sanpham);
+//        $donhang= order::where('id_customer',$id)->orderBy('id', 'desc')->get();
 
-        return view('backend.Sanphamoder',compact('donhang'));
+        return view('backend.Sanphamoder',compact('sanpham'));
     }
     public function orderhoanthanh(){
-        $donhang= customer::where(['stt'=>4])->get();
+        $donhang=  customer::where(['stt'=>4,'xoa_order' => 0])->get();
         return view('backend.donhang',compact('donhang'));
     }
 
@@ -59,9 +64,17 @@ class OrderadminController extends Controller
 
     public function Donhoanthanh()
     {
-        $donhang= customer::where('stt',3)->orderBy('id', 'desc')->get();
+        $donhang=  customer::where(['stt'=>3,'xoa_order' => 0])->get();
 
         return view('backend.donhanghoanthanh',compact('donhang'));
+    }
+    public function xoadon($id)
+    {
+
+        customer::where('id', $id)->update(['xoa_order' => 1]
+            );
+        return redirect()->route('getorder')
+            ->with('success', 'Xóa dữ liệu thành công !');
     }
 
 }

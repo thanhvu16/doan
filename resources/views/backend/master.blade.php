@@ -22,7 +22,7 @@
 
 </head>
 <body style="">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background: #F44336">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background: #f44336">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="{{asset('admin/home')}}">Hải Thanh Admin</a>
@@ -106,6 +106,9 @@
 
 
 </script>
+<!--Start of Tawk.to Script-->
+
+<!--End of Tawk.to Script-->
 </body>
 
 </html>

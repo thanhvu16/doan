@@ -56,6 +56,7 @@
                             <th>
                                 Tên Khách Hàng
                             </th>
+                            <th>Ngày mua</th>
                             <th>
                                 Trạng thái
                             </th>
@@ -71,6 +72,9 @@
                                 </td>
                                 <td>
                                     {{$data->ho_ten}}
+                                </td>
+                                <td>
+                                    {{date('d-m-Y', strtotime($data->created_at))}}
                                 </td>
                                 <td>
                                     @if($data->stt =='1')

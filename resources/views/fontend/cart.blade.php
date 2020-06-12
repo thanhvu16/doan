@@ -80,7 +80,7 @@
 
             <div class="col-xs-12 col-md-4 no-margin sidebar ">
                 <div class="widget cart-summary">
-                    <h1 class="border">shopping cart</h1>
+                    <h1 class="border">Giỏ Hàng</h1>
                     <div class="body">
                         <ul class="tabled-data no-border inverse-bold">
                             <li>

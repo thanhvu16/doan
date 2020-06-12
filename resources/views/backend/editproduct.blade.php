@@ -32,7 +32,7 @@
                                     </div>
 									<div class="form-group" >
 										<label>Giá sản phẩm</label>
-										<input required type="number" readonly id="giasp" value="" name="pro_price" class="form-control">
+										<input required type="number" readonly id="giasp" value="{{$pro->pro_price}}" name="pro_price" class="form-control">
 									</div>
 									<div class="form-group" >
 										<label>Ảnh sản phẩm</label>

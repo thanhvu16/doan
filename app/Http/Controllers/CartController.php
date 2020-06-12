@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\category;
 use App\Models\customer;
+use App\Models\order_detail;
 use App\Models\products;
 use App\Models\order;
 use Cart;
@@ -88,18 +89,21 @@ class CartController extends Controller
         $customer->address=$request->address;
         $customer->phone=$request->phone;
         $customer->save();
+        $order= new order();
+        $order->id_customer =$customer->id;
+        $order->save();
 
 
         $datacart = Cart::content();
-
+//        dd($datacart);
         foreach ($datacart as $item){
-            $order= new order();
-            $order->id_sp = $item->id;
-            $order->name_sp = $item->name;
-            $order->id_customer =$customer->id;
-            $order->sl=$item->qty;
-            $order->total=$item->qty*$item->price;
-            $order->save();
+            $detail_order= new order_detail();
+            $detail_order->id_order=$order->id;
+            $detail_order->id_sp=$item->id;
+            $detail_order->gia=$item->price;
+            $detail_order->sl=$item->qty;
+            $detail_order->tong_tien=$item->qty*$item->price;
+            $detail_order->save();
         }
         Cart::destroy();
 

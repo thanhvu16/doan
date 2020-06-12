@@ -10,9 +10,6 @@ class order extends Model
     protected $fillable = [
         'id_sp',
         'id_customer',
-        'name_sp',
-        'sl',
-        'total',
         'stt'
 ];
 }

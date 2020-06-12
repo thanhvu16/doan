@@ -93,7 +93,7 @@ class ProductController extends Controller
 
     public function updatepro(Request $request, $id)
     {
-        $requestData = $request->only('pro_cate', 'pro_name', 'pro_price', 'pro_Warranty', 'pro_accessories', 'pro_condition', 'pro_promotion', 'pro_status', 'pro_decription', 'pro_featured');
+        $requestData = $request->only('pro_cate','gia_cu','sale', 'pro_name', 'pro_price', 'pro_Warranty', 'pro_accessories', 'pro_condition', 'pro_promotion', 'pro_status', 'pro_decription', 'pro_featured');
         $fileName = '';
         if ($request->has('pro_img') && $request->pro_img != NULL) {
             $fileName = md5(time() . $request->pro_img->getClientOriginalName()) . '.' . $request->pro_img->getClientOriginalExtension();

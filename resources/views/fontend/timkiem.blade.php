@@ -109,7 +109,7 @@
                                                         <img alt="" src="assets/images/blank.gif" style="height: 153px" class="img-responsive" data-echo="{{asset('../storage/app/public/upload/'.$catepro->pro_img)}}" />
                                                     </div>
                                                     <div class="body">
-                                                        <div class="label-discount green">-50% sale</div>
+                                                        <div class="label-discount green">{{$catepro->sale}}% sale</div>
                                                         <div class="title">
                                                             <a href="single-product.html">{{$catepro->pro_name}}</a>
                                                         </div>
@@ -121,7 +121,7 @@
                                                     </div>
                                                     <div class="hover-area">
                                                         <div class="add-cart-button">
-                                                            <a href="{{ route('detaipro', $catepro->id) }}" class="le-button">add to cart</a>
+                                                            <a href="{{ route('detaipro', $catepro->id) }}" class="le-button">Thêm vào giỏ</a>
                                                         </div>
 
                                                     </div>

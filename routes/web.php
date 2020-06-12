@@ -131,5 +131,12 @@ route::group(['prefix' => 'Order'], function () {
             'uses' => 'OrderadminController@Donhoanthanh'
         ]
     );
+    Route::match(['get', 'post'],
+        'xoadon/{id}',
+        [
+            'as' =>'xoadon',
+            'uses' => 'OrderadminController@xoadon'
+        ]
+    );
 });
 
