@@ -62,16 +62,16 @@
                                     {{$key+1}}
                                 </td>
                                 <td>
-                                    {{$data->ho_ten}}
+                                    {{$data->khachhang->ho_ten ?? ''}}
                                 </td>
                                 <td>
-                                    {{$data->address}}
+                                    {{$data->khachhang->address}}
                                 </td>
                                 <td>
-                                    {{$data->phone}}
+                                    {{$data->khachhang->phone}}
                                 </td>
                                 <td>
-                                    {{$data->email}}
+                                    {{$data->khachhang->email}}
                                 </td>
                                 <td>
                                     @if($data->stt =='1')

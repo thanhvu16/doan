@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\customer;
+use App\Models\follow;
 use App\Models\order;
 use App\Models\products;
 use App\Models\category;
@@ -16,23 +17,24 @@ class FontendController extends Controller
 {
 
     public function getindex(){
-        $future= products::where('pro_featured',1)->orderBy('id','desc')->get()->take(8) ;
-        $new= products::orderBy('id','desc')->get()->take(8) ;
-        $apple= products::where('pro_cate',1)->orderBy('id','desc')->get()->take(4) ;
-        $samsung= products::where('pro_cate',2)->orderBy('id','desc')->get()->take(4) ;
+        $future= products::where(['pro_featured'=>1,'pro_status'=>1])->orderBy('id','desc')->get()->take(8) ;
+        $new= products::where('pro_status',1)->orderBy('id','desc')->get()->take(8) ;
+        $apple= products::where(['pro_cate'=>1,'pro_status'=>1])->orderBy('id','desc')->get()->take(4) ;
+        $samsung= products::where(['pro_cate'=>2,'pro_status'=>1])->orderBy('id','desc')->get()->take(4) ;
 
-        $applewatch1= products::where('pro_cate',12)->orderBy('id','desc')->get()->take(3);
-        $applewatch2= products::where('pro_cate',12)->orderBy('id','asc')->get()->take(3);
-        $phukien= products::where('pro_cate',13)->orderBy('id','asc')->get()->take(3);
-        $phukien2= products::where('pro_cate',13)->orderBy('id','desc')->get()->take(3);
+        $applewatch1= products::where(['pro_cate'=>12,'pro_status'=>1])->orderBy('id','desc')->get()->take(3);
+        $applewatch2= products::where(['pro_cate'=>12,'pro_status'=>1])->orderBy('id','asc')->get()->take(3);
+        $phukien= products::where(['pro_cate'=>13,'pro_status'=>1])->orderBy('id','asc')->get()->take(3);
+        $phukien2= products::where(['pro_cate'=>13,'pro_status'=>1])->orderBy('id','desc')->get()->take(3);
 
-        $applewatch3= products::where('pro_cate',12)->orderBy('id','asc')->first();
-
-
-
+        $applewatch3= products::where(['pro_cate'=>12,'pro_status'=>1])->orderBy('id','asc')->first();
+        $airpos= products::where(['id'=>27,'pro_status'=>1])->first();
 
 
-        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3','phukien','phukien2','apple','samsung'));
+
+
+
+        return view('fontend.home',compact('future','new','applewatch1','applewatch2','applewatch3','phukien','phukien2','apple','samsung','airpos'));
     }
 
     public function gioithieu()
@@ -52,7 +54,7 @@ class FontendController extends Controller
     public function getDeltailcate($id){
         $catename=category::find($id);
 //        dd($id);
-        $category3 = products::where('pro_cate',$id)->get();
+        $category3 = products::where('pro_cate',$id)->paginate(3);;
 
 
 
@@ -75,13 +77,20 @@ class FontendController extends Controller
 
     public function tracuudonhang(Request $request){
         $phone = $request->get('phone');
-        $donhang=customer::where('phone', $request['phone'])->whereIn('stt', [1,2,3])->where('xoa_order',0)->count();
-        $donhang1=customer::whereIn('stt', [1,2,3])
-            ->where(function ($query) use ($phone) {
-                if (!empty($phone)) {
-                    return $query->where('phone', $phone);
-                }
-            })->get();
+//        $donhang=customer::where('phone', $request['phone'])->count();
+        $customer=customer::where('phone', $request['phone'])->get();
+
+        $customer_id = $customer->pluck('id');
+
+        $donhang1=order::with('orderDetail')->whereIn('id_customer',$customer_id )->where('xoa_order',0)->whereIn('stt',[1,2,3])->get();
+//        dd($donhang1);
+        $donhang=order::with('orderDetail')->whereIn('id_customer',$customer_id )->where('xoa_order',0)->whereIn('stt',[1,2,3])->count();
+//        dd($donhang1);
+//            ->where(function ($query) use ($phone) {
+//                if (!empty($phone)) {
+//                    return $query->where('phone', $phone);
+//                }
+//            })->get();
 
 
 
@@ -93,7 +102,7 @@ class FontendController extends Controller
 
         $seachpro= $request->key;
 
-        $pro= products::where('pro_name','like','%'.$seachpro.'%')->paginate(2);
+        $pro= products::where('pro_name','like','%'.$seachpro.'%')->where('pro_status',1)->paginate(3);
 
         return view('fontend.timkiem',compact('pro'));
     }
@@ -131,5 +140,13 @@ class FontendController extends Controller
     public function dangky(Request $request){
 
         return view('fontend.dangky');
+    }
+    public function theodoikm(Request $request)
+    {
+//        dd($request);
+        $theodoi = new follow();
+        $theodoi->email=$request->email;
+        $theodoi->save();
+        return redirect()->back();
     }
 }

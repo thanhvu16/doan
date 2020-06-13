@@ -56,6 +56,9 @@
                             <th>
                                 Tên Khách Hàng
                             </th>
+                            <th>Tên Sản phẩm mua</th>
+                            <th>Giá Tiền</th>
+
                             <th>Ngày mua</th>
                             <th>
                                 Trạng thái
@@ -66,15 +69,28 @@
                         </thead>
                         <tbody>
                         @forelse($donhang1 as $key=>$data)
+                            @foreach($data->orderDetail as $item)
                             <tr class="odd">
                                 <td>
                                     {{$key+1}}
                                 </td>
                                 <td>
-                                    {{$data->ho_ten}}
+                                    {{$data->khachhang->ho_ten ?? ''}}
                                 </td>
                                 <td>
-                                    {{date('d-m-Y', strtotime($data->created_at))}}
+                                    {{$item->product->pro_name ?? ''}}
+                                </td>
+                                <td style="color: red">
+                                  {{number_format($item->gia,0,',','.')}}đ
+                                </td>
+{{--                                <td>--}}
+{{--                                    {{$data->orderDetail->gia ?? ''}}--}}
+
+{{--                                        {{$item->tong_tien}}--}}
+
+{{--                                </td>--}}
+                                <td>
+                                    {{date('d-m-Y', strtotime($data->khachhang->created_at))}}
                                 </td>
                                 <td>
                                     @if($data->stt =='1')
@@ -86,7 +102,7 @@
                                     @endif
                                 </td>
 
-
+                                @endforeach
                                 @empty
                             </tr>
 

@@ -515,6 +515,39 @@
 
                     </div><!-- /.row -->
                 </div><!-- /.col -->
+                <div class="col-xs-12 col-md-5 no-margin">
+                    <div class="product-item-holder size-big single-product-gallery small-gallery">
+
+                        <div id="" class="single-product-slider ">
+                            <div class="single-product-gallery-item" id="">
+                                <a href="{{ route('detaipro', $airpos->id) }}">
+                                    <img alt="" src="assets/images/blank.gif"
+                                         data-echo="{{asset('../storage/app/public/upload/'.$airpos->pro_img)}}"/>
+{{--                                    <img src="{{asset('../storage/app/public/upload/'.$airpos->pro_img)}}" alt="">--}}
+                                </a>
+                            </div><!-- /.single-product-gallery-item -->
+
+                        </div><!-- /.single-product-slider -->
+
+                        <div class="gallery-thumbs clearfix">
+
+                        </div><!-- /.gallery-thumbs -->
+
+                        <div class="body">
+                            <div class="label-discount clear"></div>
+                            <div class="title">
+                                <a href="{{ route('detaipro', $airpos->id) }}">{{$airpos->pro_name}}</a>
+                            </div>
+                            <div class="brand">{{$airpos->procate->cate_name ?? ''}}</div>
+                        </div>
+                        <div class="prices text-right">
+                            <div class="price-current inline">{{number_format($airpos->pro_price,0,',','.')}}đ
+                            </div>
+                            <a href="{{route('addcart' , $airpos->id) }}" class="le-button big inline">Thêm vào
+                                giỏ</a>
+                        </div>
+                    </div><!-- /.product-item-holder -->
+                </div><!-- /.col -->
 
 
             </div><!-- /.product-grid-holder -->
@@ -542,49 +575,49 @@
                 <div id="owl-brands" class="owl-carousel brands-carousel">
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a>
                             <img alt="" style="width: 80px" src="assets/images/brands/apple.jpg"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a>
                             <img alt="" style="width: 125px" src="assets/images/brands/samsung.png"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a >
                             <img alt="" style="width: 125px" src="assets/images/brands/oppo.png"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a>
                             <img alt="" style="width: 125px" src="assets/images/brands/b.png"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a >
                             <img alt="" style="width: 73px" src="assets/images/brands/lg.jpg"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a >
                             <img alt="" style="width: 125px" src="assets/images/brands/mizz.png"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a>
                             <img alt="" style="width: 125px" src="assets/images/brands/vt.png"/>
                         </a>
                     </div><!-- /.carousel-item -->
 
                     <div class="carousel-item">
-                        <a href="#">
+                        <a>
                             <img alt="" src="assets/images/brands/brand-04.jpg"/>
                         </a>
                     </div><!-- /.carousel-item -->

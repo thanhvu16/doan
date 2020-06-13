@@ -40,111 +40,11 @@
                     </div><!-- /.post-content -->
                 </div><!-- /.post-entry -->
 
-                <div class="meta-row">
-                    <div class="inline">
-                        <label>tag:</label>
-                        <span><a href="#">fast</a>,</span>
-                        <span><a href="#">gaming</a>,</span>
-                        <span><a href="#">strong</a></span>
-                    </div>
-                </div><!-- /.meta-row -->
 
-                <div class="blog-post-author">
-                    <div class="media">
-                        <a href="#" class="pull-left"><img src="assets/images/blog-post/blog-author.jpg" alt=""></a>
-                        <div class="media-body">
-                            <h4 class="media-heading"><a href="#">Jane Smith</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-                        </div>
-                    </div>
-                </div><!-- /.blog-post-author -->
 
-                <section id="comments" class="inner-bottom-xs">
-                    <h3>2 Comments</h3>
 
-                    <div class="comment-item">
-                        <div class="row no-margin">
-                            <div class="col-lg-1 col-xs-12 col-sm-2 no-margin">
-                                <div class="avatar">
-                                    <img src="assets/images/default-avatar.jpg" alt="avatar">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-lg-11 col-sm-10 no-margin-right">
-                                <div class="comment-body">
-                                    <div class="meta-info">
-                                        <header class="row no-margin">
-                                            <div class="pull-left">
-                                                <h4 class="author"><a href="#">Angela</a></h4>
-                                                <span class="date">- 21 hours ago</span>
-                                                <span class="likes"><a href="#"><span class="likes-count">22</span><i class="icon fa fa-thumbs-up"></i></a></span>
-                                                <span class="dislikes"><a href="#"><i class="icon fa fa-thumbs-down"></i></a></span>
-                                            </div>
-                                            <div class="pull-right">
-                                                <a class="comment-reply" href="#">Reply</a>
-                                            </div>
-                                        </header>
-                                    </div>
-                                    <p class="comment-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="comment-item">
-                        <div class="row no-margin">
-                            <div class="col-lg-1 col-xs-12 col-sm-2 no-margin">
-                                <div class="avatar">
-                                    <img src="assets/images/default-avatar.jpg" alt="avatar">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-lg-11 col-sm-10 no-margin-right">
-                                <div class="comment-body">
-                                    <div class="meta-info">
-                                        <header class="row no-margin">
-                                            <div class="pull-left">
-                                                <h4 class="author"><a href="#">Angela</a></h4>
-                                                <span class="date">- 21 hours ago</span>
-                                                <span class="likes"><a href="#"><span class="likes-count">22</span><i class="icon fa fa-thumbs-up"></i></a></span>
-                                                <span class="dislikes"><a href="#"><i class="icon fa fa-thumbs-down"></i></a></span>
-                                            </div>
-                                            <div class="pull-right">
-                                                <a class="comment-reply" href="#">Reply</a>
-                                            </div>
-                                        </header>
-                                    </div>
-                                    <p class="comment-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
-                <section id="reply-block" class="leave-reply">
-                    <h3>Leave a Reply</h3>
-                    <p>Your email address cannot be published. Required fields are marked <abbr class="required">*</abbr> </p>
-
-                    <form role="form" class="reply-form cf-style-1">
-                        <div class="row field-row">
-                            <div class="col-xs-12 col-sm-6">
-                                <label>full name*</label>
-                                <input class="le-input">
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <label>last name*</label>
-                                <input class="le-input">
-                            </div>
-                        </div>
-
-                        <div class="row field-row">
-                            <div class="col-xs-12">
-                                <label>company name</label>
-                                <textarea rows="10" id="inputComment" class="form-control le-input"></textarea>
-                            </div>
-                        </div>
-                        <button class="le-button big post-comment-button" type="submit">Post comment</button>
-                    </form>
-
-                </section>
             </div><!-- /.posts -->
 
             <!-- ========================================= CONTENT :END ========================================= -->

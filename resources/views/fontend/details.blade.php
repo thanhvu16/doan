@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="qnt-holder">
-                        <a id="addto-cart" href="{{route('addcart' , $detaipro->id) }}" class="le-button huge">add to cart</a>
+                        <a id="addto-cart" href="{{route('addcart' , $detaipro->id) }}" class="le-button huge">Thêm vào giỏ</a>
                     </div><!-- /.qnt-holder -->
                 </div><!-- /.body -->
 
@@ -147,30 +147,7 @@
                             </li>
                         </ul><!-- /.tabled-data -->
 
-                        <div class="meta-row">
-                            <div class="inline">
-                                <label>SKU:</label>
-                                <span>54687621</span>
-                            </div><!-- /.inline -->
 
-                            <span class="seperator">/</span>
-
-                            <div class="inline">
-                                <label>categories:</label>
-                                <span><a href="#">-50% sale</a>,</span>
-                                <span><a href="#">gaming</a>,</span>
-                                <span><a href="#">desktop PC</a></span>
-                            </div><!-- /.inline -->
-
-                            <span class="seperator">/</span>
-
-                            <div class="inline">
-                                <label>tag:</label>
-                                <span><a href="#">fast</a>,</span>
-                                <span><a href="#">gaming</a>,</span>
-                                <span><a href="#">strong</a></span>
-                            </div><!-- /.inline -->
-                        </div><!-- /.meta-row -->
                     </div><!-- /.tab-pane #additional-info -->
 
 

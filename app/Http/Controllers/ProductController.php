@@ -28,7 +28,7 @@ class ProductController extends Controller
 
 //        $data['prolist']=DB::table('products')->join('category','products.pro_cate', '=', 'category.id')->get();
 //        return view('backend.product',$data);
-        $data = products::all();
+        $data = products::where('pro_status',1)->orderBy('id','desc')->get();
         return view('backend.product', compact('data'));
 
     }
@@ -107,7 +107,9 @@ class ProductController extends Controller
 
     public function deletepro($id)
     {
-        products::whereId($id)->delete();
+//        products::whereId($id)->delete();
+        products::where('id', $id)->update(['pro_status' => 0]
+            );
         return back();
     }
 }

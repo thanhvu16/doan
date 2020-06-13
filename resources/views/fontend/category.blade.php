@@ -6,45 +6,12 @@
             <!-- ========================================= SIDEBAR ========================================= -->
             <div class="col-xs-12 col-sm-3 no-margin sidebar narrow">
                 <!-- ========================================= PRODUCT FILTER ========================================= -->
-                <div class="widget">
-                    <h1>Hãng điện thoại</h1>
-                    <form action="" method="post">
-                        @csrf
-                    <div class="body bordered">
 
-                        <div class="category-filter">
-                            <h2>Các Hãng</h2>
-                            <hr>
-                            <ul>
-                                @foreach($category as $cate)
-                                <li><label>{{$cate->cate_name}}</label> <span class="pull-right">(!)</span></li>
-                                @endforeach
-                            </ul>
-                        </div><!-- /.category-filter -->
-
-                        <div class="price-filter">
-                            <hr>
-                            <div class="price-range-holder">
-
-                                <input type="text" class="price-slider" name="price" value="" >
-
-{{--                                <span class="min-max">--}}
-{{--                                            Price: 0 - 10000000đ--}}
-{{--                                        </span>--}}
-                                <span class="filter-button">
-
-                                        </span>
-                            </div>
-                        </div><!-- /.price-filter -->
-
-                    </div><!-- /.body -->
-                    </form>
-                </div><!-- /.widget -->
                 <!-- ========================================= PRODUCT FILTER : END ========================================= -->
 
                 <!-- ========================================= CATEGORY TREE ========================================= -->
-                <div class="widget">
-                    <h4>Hãng điện thoại</h4>
+                <div class="widget" style="margin-top: 20px">
+                    <legend>Hãng Sản phẩm</legend>
                     <div class="body">
                         <ul class="le-links">
                             @foreach($category as $cate)
@@ -61,7 +28,7 @@
 
                 <div class="widget">
                     <div class="simple-banner">
-                        <a href="#"><img alt="" class="img-responsive" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-simple.jpg" /></a>
+                        <a ><img alt="" class="img-responsive" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-simple.jpg" /></a>
                     </div>
                 </div>
 
@@ -75,7 +42,7 @@
 
             <div class="col-xs-12 col-sm-9 no-margin wide sidebar">
                 <div id="grid-page-banner">
-                    <a href="#">
+                    <a >
                         <img src="assets/images/banners/banner-gamer.jpg" alt="" />
                     </a>
                 </div>
@@ -85,19 +52,19 @@
                         <h2 class="section-title">Hãng {{$catename->cate_name}} </h2>
 
                         <div class="control-bar">
-                            <div id="popularity-sort" class="le-select" >
-                                <select data-placeholder="sort by popularity">
-                                    <option value="1">1-100 sản phẩm</option>
+{{--                            <div id="popularity-sort" >--}}
+{{--                                <select data-placeholder="sort by popularity">--}}
+{{--                                    <option value="1">1-100 sản phẩm</option>--}}
 
-                                </select>
-                            </div>
+{{--                                </select>--}}
+{{--                            </div>--}}
 
 
 
                             <div class="grid-list-buttons">
                                 <ul>
-                                    <li class="grid-list-button-item active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> Grid</a></li>
-                                    <li class="grid-list-button-item "><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> List</a></li>
+                                    <li class="grid-list-button-item active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> Lưới</a></li>
+                                    <li class="grid-list-button-item "><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> Chi tiết</a></li>
                                 </ul>
                             </div>
                         </div><!-- /.control-bar -->
@@ -115,7 +82,7 @@
                                                     <img alt="" src="assets/images/blank.gif" class="img-responsive" style="height: 153px" data-echo="{{asset('../storage/app/public/upload/'.$catepro->pro_img)}}" />
                                                 </div>
                                                 <div class="body">
-                                                    <div class="label-discount green">-50% sale</div>
+                                                    <div class="label-discount green">{{$catepro->sale}}% sale</div>
                                                     <div class="title">
                                                         <a href="{{ route('detaipro', $catepro->id) }}">{{$catepro->pro_name}}</a>
                                                     </div>
@@ -127,7 +94,7 @@
                                                 </div>
                                                 <div class="hover-area">
                                                     <div class="add-cart-button">
-                                                        <a href="{{ route('detaipro', $catepro->id) }}" class="le-button">add to cart</a>
+                                                        <a href="{{route('addcart' , $catepro->id) }}" class="le-button">Thêm vào giỏ</a>
                                                     </div>
 
                                                 </div>
@@ -144,11 +111,7 @@
 
                                         <div class="col-xs-12 col-sm-6 text-left">
                                             <ul class="pagination ">
-                                                <li class="current"><a  href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">next</a></li>
+                                                {{ $category3->appends(request()->input())->links() }}
                                             </ul>
                                         </div>
 
@@ -163,7 +126,7 @@
                                     @foreach($category3 as $catepro)
                                     <div class="product-item product-item-holder">
                                         <div class="ribbon red"><span>sale</span></div>
-                                        <div class="ribbon blue"><span>new!</span></div>
+
                                         <div class="row">
                                             <div class="no-margin col-xs-12 col-sm-4 image-holder">
                                                 <div class="image">
@@ -172,14 +135,12 @@
                                             </div><!-- /.image-holder -->
                                             <div class="no-margin col-xs-12 col-sm-5 body-holder">
                                                 <div class="body">
-                                                    <div class="label-discount green">-50% sale</div>
+                                                    <div class="label-discount green">{{$catepro->sale}}% sale</div>
                                                     <div class="title">
                                                         <a href="{{ route('detaipro', $catepro->id) }}">{{$catepro->pro_name}}</a>
                                                     </div>
-                                                    <div class="brand">sony</div>
-                                                    <div class="excerpt">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis euismod erat sit amet porta. Etiam venenatis ac diam ac tristique. Morbi accumsan consectetur odio ut tincidunt.</p>
-                                                    </div>
+                                                    <div class="brand">{{$catepro->procate->cate_name ?? ''}}</div>
+
 
                                                 </div>
                                             </div><!-- /.body-holder -->
@@ -187,8 +148,8 @@
                                                 <div class="right-clmn">
                                                     <div class="price-current">{{number_format(3450000,0,',','.')}}đ</div>
                                                     <div class="price-prev">{{number_format($catepro->pro_price,0,',','.')}}đ</div>
-                                                    <a class="le-button" href="{{ route('detaipro', $catepro->id) }}">add to cart</a>
-                                                    <a class="btn-add-to-wishlist" href="">Yêu Thích</a>
+                                                    <a class="le-button" href="{{route('addcart' , $catepro->id) }}">Thêm </a>
+
                                                 </div>
                                             </div><!-- /.price-area -->
                                         </div><!-- /.row -->
@@ -203,11 +164,8 @@
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 text-left">
                                             <ul class="pagination">
-                                                <li class="current"><a  href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">next</a></li>
+                                                <li class="current">{{ $category3->appends(request()->input())->links() }}</li>
+
                                             </ul><!-- /.pagination -->
                                         </div>
                                         <div class="col-xs-12 col-sm-6">

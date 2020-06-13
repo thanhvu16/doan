@@ -47,6 +47,8 @@
         <li><a href="{{asset('category')}}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Hãng sản phẩm</a></li>
         <li><a href="{{route('getorder')}}"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg> Đơn Hàng</a></li>
         <li><a href="{{route('Blog.index')}}"><svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg>Tin tức</a></li>
+        <li><a href="{{route('thongke')}}"><svg class="glyph stroked hourglass"><use xlink:href="#stroked-hourglass"/></svg>Thống kê</a></li>
+        <li><a href="{{route('khuyenmai')}}"><svg class="glyph stroked two messages"><use xlink:href="#stroked-two-messages"/></svg>Mail khách nhận khuyến mại</a></li>
         <li role="presentation" class="divider"></li>
     </ul>
 

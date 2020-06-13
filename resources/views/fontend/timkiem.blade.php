@@ -6,42 +6,42 @@
             <!-- ========================================= SIDEBAR ========================================= -->
             <div class="col-xs-12 col-sm-3 no-margin sidebar narrow">
                 <!-- ========================================= PRODUCT FILTER ========================================= -->
-                <div class="widget">
-                    <h1>Lọc Sản Phẩm</h1>
-                    <div class="body bordered">
+{{--                <div class="widget">--}}
+{{--                    <h1>Lọc Sản Phẩm</h1>--}}
+{{--                    <div class="body bordered">--}}
 
-                        <div class="category-filter">
-                            <h2>Tìm Theo Hãng</h2>
-                            <hr>
-                            <ul>
-                                @foreach($category as $cate)
-                                    <li><input checked="checked" class="le-checkbox" type="checkbox"  /> <label>{{$cate->cate_name}}</label> <span class="pull-right">(2)</span></li>
-                                @endforeach
-                            </ul>
-                        </div><!-- /.category-filter -->
+{{--                        <div class="category-filter">--}}
+{{--                            <h2>Tìm Theo Hãng</h2>--}}
+{{--                            <hr>--}}
+{{--                            <ul>--}}
+{{--                                @foreach($category as $cate)--}}
+{{--                                    <li><input checked="checked" class="le-checkbox" type="checkbox"  /> <label>{{$cate->cate_name}}</label> <span class="pull-right">(2)</span></li>--}}
+{{--                                @endforeach--}}
+{{--                            </ul>--}}
+{{--                        </div><!-- /.category-filter -->--}}
 
-                        <div class="price-filter">
-                            <h2>Tìm theo giá</h2>
-                            <hr>
-                            <div class="price-range-holder">
+{{--                        <div class="price-filter">--}}
+{{--                            <h2>Tìm theo giá</h2>--}}
+{{--                            <hr>--}}
+{{--                            <div class="price-range-holder">--}}
 
-                                <input type="text" class="price-slider" value="" >
+{{--                                <input type="text" class="price-slider" value="" >--}}
 
-                                <span class="min-max">
-                                            Price: 0 - 10000000đ
-                                        </span>
-                                <span class="filter-button">
-                                            <a href="#">Tìm kiếm</a>
-                                        </span>
-                            </div>
-                        </div><!-- /.price-filter -->
+{{--                                <span class="min-max">--}}
+{{--                                            Price: 0 - 10000000đ--}}
+{{--                                        </span>--}}
+{{--                                <span class="filter-button">--}}
+{{--                                            <a href="#">Tìm kiếm</a>--}}
+{{--                                        </span>--}}
+{{--                            </div>--}}
+{{--                        </div><!-- /.price-filter -->--}}
 
-                    </div><!-- /.body -->
-                </div><!-- /.widget -->
+{{--                    </div><!-- /.body -->--}}
+{{--                </div><!-- /.widget -->--}}
                 <!-- ========================================= PRODUCT FILTER : END ========================================= -->
 
                 <!-- ========================================= CATEGORY TREE ========================================= -->
-                <div class="widget">
+                <div class="widget" style="margin-top: 20px">
                     <h4>Hãng điện thoại</h4>
                     <div class="body">
                         <ul class="le-links">
@@ -59,7 +59,7 @@
 
                 <div class="widget">
                     <div class="simple-banner">
-                        <a href="#"><img alt="" class="img-responsive" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-simple.jpg" /></a>
+                        <a ><img alt="" class="img-responsive" src="assets/images/blank.gif" data-echo="assets/images/banners/banner-simple.jpg" /></a>
                     </div>
                 </div>
 
@@ -79,18 +79,12 @@
                         <h2 class="section-title">Tìm kiếm </h2>
 
                         <div class="control-bar">
-                            <div id="popularity-sort" class="le-select" >
-                                <select data-placeholder="sort by popularity">
-                                    <option value="1">1-100 sản phẩm</option>
-
-                                </select>
-                            </div>
 
 
 
                             <div class="grid-list-buttons">
                                 <ul>
-                                    <li class="grid-list-button-item active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> Grid</a></li>
+                                    <li class="grid-list-button-item active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> Dạng lưới</a></li>
 
                                 </ul>
                             </div>
@@ -138,11 +132,7 @@
 
                                         <div class="col-xs-12 col-sm-6 text-left">
                                             <ul class="pagination ">
-                                                <li class="current"><a  href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">next</a></li>
+                                                {{ $pro->appends(request()->input())->links() }}
                                             </ul>
                                         </div>
 

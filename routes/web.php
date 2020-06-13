@@ -39,6 +39,14 @@ Route::match(['get', 'post'],
         'uses' => 'FontendController@timkiemsanpham'
     ]
 );
+//Route::match(['get', 'post'],
+//    'theodoi',
+//    [
+//        'as' =>'theodoi',
+//        'uses' => 'FontendController@theodoikm'
+//    ]
+//);
+route::post('theodoi','FontendController@theodoikm')->name('theodoi');
 
 route::group(['prefix'=>'cart'],function(){
     route::get('addcart/{id}','CartController@getaddcart')->name('addcart');
@@ -72,6 +80,10 @@ route::get('logout', 'HomeController@getLogout');
 route::group(['prefix' => 'admin','middleware'=>'Checklogout'], function () {
     route::get('home', 'HomeController@getHome')->name('home');
 });
+route::group(['prefix' => 'theodoikm'], function () {
+    route::get('/', 'OrderadminController@khuyenmai')->name('khuyenmai');
+});
+
 route::group(['prefix' => 'category'], function () {
     route::get('/', 'Category1Controller@cate')->name('category');
     route::post('/', 'Category1Controller@create')->name('createcategory');
@@ -108,6 +120,13 @@ route::group(['prefix' => 'Order'], function () {
         [
             'as' =>'sttdonhang',
             'uses' => 'OrderadminController@sttdonhang'
+        ]
+    );
+    Route::match(['get', 'post'],
+        'thongke',
+        [
+            'as' =>'thongke',
+            'uses' => 'OrderadminController@thongke'
         ]
     );
     Route::match(['get', 'post'],

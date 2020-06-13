@@ -12,4 +12,12 @@ class order extends Model
         'id_customer',
         'stt'
 ];
+    public function khachhang()
+    {
+        return $this->hasOne(customer::class, 'id', 'id_customer');
+    }
+    public function orderDetail()
+    {
+        return $this->hasMany(order_detail::class, 'id_order', 'id');
+    }
 }

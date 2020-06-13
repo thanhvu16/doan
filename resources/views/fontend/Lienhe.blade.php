@@ -10,9 +10,9 @@
                 <div class="row" style="margin-top: 40px">
                     <div class="col-lg-6 col-md-6">
                         <h5>
-                            <span class="section-title-main" style="color:rgb(35, 79, 172);">CÔNG TY TNHH ABCDE</span>
+                            <span class="section-title-main" style="color:rgb(35, 79, 172);">Cửa hàng điện thoại Hải Thanh mobile</span>
                         </h5>
-                        <p><strong style="color: rgba(14, 85, 165, 1);">Địa chỉ liên hệ: </strong>Đường Hoàng Mai, Hai Bà Trưng, TP Hà Nội.</p>
+                        <p><strong style="color: rgba(14, 85, 165, 1);">Địa chỉ liên hệ: </strong>118 Lê Thanh Nghị, hbt, Hà Nội</p>
                         <p><strong style="color: rgba(14, 85, 165, 1);">Mã số thuế:</strong> <span style="letter-spacing: 1px;">0106185978</span></p>
                         <p><strong style="color: rgba(14, 85, 165, 1);">Số điện thoại: </strong>0383574229</p>
                         <p><strong style="color: rgba(14, 85, 165, 1);">Email: </strong>Vuhaithanhcx1@gmail.com</p>

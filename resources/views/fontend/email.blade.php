@@ -23,26 +23,44 @@
 						</div>
 						<div id="hoa-don">
 							<h3>Hóa đơn mua hàng</h3>
-							<table class="table-bordered table-responsive">
-								<tr class="bold">
-									<td width="30%">Tên sản phẩm</td>
-									<td width="25%">Giá</td>
-									<td width="20%">Số lượng</td>
-									<td width="15%">Thành tiền</td>
-								</tr>
-                                @foreach($cart as $item)
-								<tr>
-									<td>{{$item->name}}</td>
-									<td class="price">{{number_format($item->price,0,',','.')}}</td>
-									<td>{{$item->qty}}</td>
-									<td class="price">{{$item->qty*$item->price}} VNĐ</td>
-								</tr>
+                            <table class="table table-bordered table-striped table-hover dataTable js-exportable"  >
+                                <thead>
+                                <tr role="row">
+                                    <th>
+                                        Tên sản phẩm
+                                    </th>
+                                    <th>
+                                        Giá
+                                    </th>
+                                    <th>
+                                        Số lượng
+                                    </th>
+                                    <th>
+                                        Thành tiền
+                                    </th>
 
-								<tr>
-									<td colspan="3">Tổng tiền:</td>
-									<td class="total-price">{{$total}}</td>
-								</tr>
-							</table>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($cart as $item)
+                                    <tr>
+                                        <td>{{$item->name}}</td>
+                                        <td class="price">{{number_format($item->price,0,',','.')}}</td>
+                                        <td>{{$item->qty}}</td>
+                                        <td class="price">{{$item->qty*$item->price}} VNĐ</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="3">Tổng tiền:</td>
+                                        <td class="total-price">{{$total}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Tổng tiền:</td>
+                                        <td class="total-price">{{$total}}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
 						</div>
 						<div id="xac-nhan">
 							<br>
